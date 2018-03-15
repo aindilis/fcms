@@ -1,0 +1,75 @@
+[% USE Dumper(Indent=1) -%]
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Utility Max System';
+-%]
+
+  <a href="[% c.uri_for('bill_payment') %]" class="btn btn-default pull-left">Bill Payment</a><br><br>
+
+  <ul>
+    <li>Buy/Sell
+    <ul>
+      <li>Purchases
+	<ul>
+	  <li>Authorize</li>
+	  <li>Record</li>
+	</ul>
+      </li>
+      <li>Sales
+	<ul>
+	  <li>Authorize</li>
+	  <li>Record</li>
+	</ul>
+      </li>
+    </ul>
+    </li>
+
+    <li>Income
+    <ul>
+    </ul>
+    </li>
+
+    <li>Assets/Liabilities
+    <ul>
+      <li>Assets
+      <ul>
+        <li>Accounts
+        <ul>
+	  <li>
+	    <a href="[% c.uri_for('update_all') %]" class="btn btn-default">Update All</a></td>
+	  </li>
+	[% FOREACH account IN Accounts %]
+	  <li><a href="[% c.uri_for('account',account.Constant) %]">[% account.Name %]</a>
+	    <ul>
+              <li>
+	        <table width="35%">
+	          <tr>
+                    <td widht="20%"><a href="[% c.uri_for('update',account.Constant) %]" class="btn btn-default">Update</a></td>
+                    <td width="30%">Available: [% account.Amount %]</td>
+                    <td width="30%">DateTimeStamp: [% account.DateTimeStamp %]</td>
+                  </tr>
+                </table>
+              </li>
+	    </ul>
+	  </li>
+        [% END %]
+	</ul>
+      </ul>
+      </li>
+      <li>Liabilities
+      <ul>
+      </ul>
+      </li>
+    </ul>
+    </li>
+
+    <li>Loans
+      <ul>
+	<li>Record
+	  <ul>
+	    <li>Giving Loan</li>
+	    <li>Receiving Loan</li>
+	  </ul>
+	</li>
+      </ul>
+    </li>
+  </ul>

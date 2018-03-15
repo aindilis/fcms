@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">About Us
+        <small></small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+
+      <p> 
+
+      	  The ByteLibrary is a large collection of free and open
+	  source software, and collections of data.  We decided that
+	  to help us distribute our software and data and our
+	  collections of external software and data, we would start a
+	  business around it.  We call it the "Scramjet" business
+	  model, because after a short time delay we make available
+	  all of our software, data and OS packages under free/libre
+	  licenses.  This helps us continue innovating.
+
+	  
+
+      </p>
+
+      <hr>
+      <blockquote>
+
+        <p>
+
+	Our collections focus on <strong>Computer Science</strong> and 
+	<strong>Artificial Intelligence</strong>.
+
+	</p>
+
+      </blockquote>
+    </div>
+  </div>
+</div>

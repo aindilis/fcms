@@ -1,0 +1,14 @@
+[% USE Dumper(Indent=1) -%]
+[% USE SWIPLI -%]
+
+[%- hash = SWIPLI.GetHash(SWIPLI.GetList(results).0) -%]
+
+<h3>Pedigree of [% hash.genealogyName %]</h3>
+
+[% tmp = hash.pedigree.shift %]
+
+<ul>
+  [% FOREACH item IN hash.pedigree %]
+  <li>[% item %]</li>
+  [% END %]
+</ul>

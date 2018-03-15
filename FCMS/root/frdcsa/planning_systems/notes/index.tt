@@ -1,0 +1,6 @@
+<pre><span class="inner-pre" style="font-size: [% IF user_name == 'elliethere' %]24[% ELSE %]12[% END %]px">
+[%- USE HTML -%]
+[%- c.controller('FRDCSA::Planning_Systems::Notes').Markup(HTML.escape(notes)) -%]
+<!-- [% notes | html %] -->
+</pre>
+

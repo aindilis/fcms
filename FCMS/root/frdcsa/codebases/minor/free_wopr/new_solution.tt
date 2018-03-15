@@ -1,0 +1,9 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+<h3>Return to <a href="[% c.uri_for('') %]">WOPR</a></h3>
+
+[% Dumper.dump(results) %]

@@ -1,0 +1,25 @@
+<div class="box-body">
+<h4>Unprepared For Contingencies &nbsp; <a href="[%- c.uri_for('') %]"><small><i class="fa fa-edit"></i></small></a>:</h4>
+<ul class="todo-list">
+[%- FOREACH contingency IN output.unpreparedForContingency %]
+  [% contingencyProlog = c.model('FRDCSA').Convert('Input', [contingency], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+  [% matches = contingencyProlog.match('(.+?)\.?\n?$') %]
+  <li>
+  <!-- drag handle -->
+  <span class="handle">
+  <i class="fa fa-ellipsis-v"></i>
+  <i class="fa fa-ellipsis-v"></i>
+  </span>
+  <!-- checkbox -->
+  <input type="checkbox" value="" name="">
+  <!-- todo text -->
+  <span class="text">
+  <b>
+  <a href="[%- c.uri_for('contingency',matches.0) %]">[%- matches.0 -%]</a> &nbsp;
+  <br>
+  </b>
+  </span>
+  </li>
+[%- END %]
+</ul>
+</div>

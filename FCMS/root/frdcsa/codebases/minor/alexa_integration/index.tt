@@ -1,0 +1,67 @@
+[% USE Dumper %]
+[% USE SWIPLI -%]
+
+[% list = SWIPLI.GetList(results) %]
+[% interactions = SWIPLI.GetList(list.0.2) %]
+
+<a href="http://play.google.com/store/apps/details?id=com.avsintegration.android" class="btn btn-default pull-left">Install Android Ubi (Alexa) Application</a>
+<a href="https://itunes.apple.com/us/app/lexi-for-alexa-voice-services/id1092933088?mt=8&at=10lNUC" class="btn btn-default pull-left">Install iPhone Alexa Application</a>
+
+<br><br>
+
+<form action="[% c.uri_for('') %]" method="POST">
+<input type="submit" name="correct" value="Correct"><br>
+<table>
+[% FOREACH interaction IN interactions  %]
+<tr>
+<td>
+Query:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+[% interaction.1 %]
+</td>
+</tr>
+<tr>
+<td>
+Correction:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<input type="text" name="correction" value="[% interaction.1 %]" size="80"></input>
+</td>
+</tr>
+
+<tr>
+<td>
+Answer:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+[% interaction.2 %]
+</td>
+</tr>
+<tr>
+<td>
+Command:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+[% c.model('FRDCSA').Convert('Input', [interaction.3], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+</td>
+</tr>
+<tr>
+<td>
+Date:
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+[% interaction.4 %]
+</td>
+</tr>
+<tr>
+<td colspan=3>&nbsp;</td>
+</tr>
+[% END %]
+</table>
+</form>

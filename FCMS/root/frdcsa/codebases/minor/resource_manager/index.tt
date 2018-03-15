@@ -1,0 +1,37 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+<h3>Welcome to the Free Life Planner Resource Manager!</h3>
+
+<!-- Main row -->
+  <div class="box-body">
+    <!-- Left col -->
+    <section class="col-lg-6 connectedSortable">
+      <!-- TO DO List -->
+
+      <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#shopping_list_1" data-toggle="tab">Shopping_List_1</a></li>
+        <li><a href="#shopping_list_2" data-toggle="tab">Shopping_List_2</a></li>
+      </ul>
+      <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+     
+      <div class="tab-content">
+        <div class="tab-pane active" id="shopping_list_1">
+	  [%- INCLUDE 'frdcsa/codebases/minor/resource_manager/shopping_list_1.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+        <div class="tab-pane" id="shopping_list_2">
+	  [%- INCLUDE 'frdcsa/codebases/minor/resource_manager/shopping_list_2.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+
+    </section>
+    <!-- /.Left col -->
+
+  </div>
+<!-- /.row (main row) -->

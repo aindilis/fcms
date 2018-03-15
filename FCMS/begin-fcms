@@ -1,0 +1,12 @@
+#!/bin/bash
+
+HOSTNAME=`hostname -f`
+if [ $HOSTNAME == 'ai.frdcsa.org' ]; then
+    ./begin-frdcsa
+elif [ $HOSTNAME == 'panoply2.frdcsa.org' ]; then
+    ./begin-planner
+elif [ $HOSTNAME == 'columcille.frdcsa.org' ]; then
+    ./begin-columcille
+elif [ $HOSTNAME == 'dev.bytelibrary.com' ]; then
+    ./begin-bytelibrary
+fi

@@ -1,0 +1,9 @@
+[% USE Dumper(Indent=1) -%]
+
+<ul>
+[% FOREACH file IN files %]
+   <li>
+	<a href="[% c.uri_for(file) %]">[% file %]</a>
+   </li>
+[% END %] 
+</ul>

@@ -1,0 +1,38 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+<h3>Welcome to the Utility Maximization System!</h3>
+
+<!-- Main row -->
+  <div class="box-body">
+    <!-- Left col -->
+    <section class="col-lg-6 connectedSortable">
+      <!-- TO DO List -->
+
+      <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+        <li><a href="#projections" data-toggle="tab">Projections</a></li>
+      </ul>
+      <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+     
+      <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+	  [%- INCLUDE 'frdcsa/codebases/minor/utility_maximization_system/overview.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+        <div class="tab-pane" id="projections">
+	  [%- INCLUDE 'frdcsa/codebases/minor/utility_maximization_system/projections.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+
+    </section>
+    <!-- /.Left col -->
+
+  </div>
+<!-- /.row (main row) -->
+

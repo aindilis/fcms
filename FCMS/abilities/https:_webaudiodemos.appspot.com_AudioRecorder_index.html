@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>https://webaudiodemos.appspot.com/AudioRecorder/index.html</title><link rel="stylesheet" type="text/css" href="https:_webaudiodemos.appspot.com_AudioRecorder_index_files/viewsource.css"></head><body contextmenu="actions" id="viewsource" class="highlight" style="-moz-tab-size: 4"><pre id="line1"><span></span><span class="doctype">&lt;!doctype html&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">html</span>&gt;</span><span>
+<span id="line3"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line4"></span>	</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">viewport</a>" <span class="attribute-name">content</span>="<a class="attribute-value">width=device-width,initial-scale=1</a>"&gt;</span><span>
+<span id="line5"></span>	</span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>Audio Recorder</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line6"></span>
+<span id="line7"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/js/audiodisplay.js" class="attribute-value">js/audiodisplay.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line8"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/js/recorderjs/recorder.js" class="attribute-value">js/recorderjs/recorder.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line9"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/js/main.js" class="attribute-value">js/main.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line10"></span>	</span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line11"></span>	html { overflow: hidden; }
+<span id="line12"></span>	body { 
+<span id="line13"></span>		font: 14pt Arial, sans-serif; 
+<span id="line14"></span>		background: lightgrey;
+<span id="line15"></span>		display: flex;
+<span id="line16"></span>		flex-direction: column;
+<span id="line17"></span>		height: 100vh;
+<span id="line18"></span>		width: 100%;
+<span id="line19"></span>		margin: 0 0;
+<span id="line20"></span>	}
+<span id="line21"></span>	canvas { 
+<span id="line22"></span>		display: inline-block; 
+<span id="line23"></span>		background: #202020; 
+<span id="line24"></span>		width: 95%;
+<span id="line25"></span>		height: 45%;
+<span id="line26"></span>		box-shadow: 0px 0px 10px blue;
+<span id="line27"></span>	}
+<span id="line28"></span>	#controls {
+<span id="line29"></span>		display: flex;
+<span id="line30"></span>		flex-direction: row;
+<span id="line31"></span>		align-items: center;
+<span id="line32"></span>		justify-content: space-around;
+<span id="line33"></span>		height: 20%;
+<span id="line34"></span>		width: 100%;
+<span id="line35"></span>	}
+<span id="line36"></span>	#record { height: 15vh; }
+<span id="line37"></span>	#record.recording { 
+<span id="line38"></span>		background: red;
+<span id="line39"></span>		background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+<span id="line40"></span>		background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+<span id="line41"></span>		background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+<span id="line42"></span>	}
+<span id="line43"></span>	#save, #save img { height: 10vh; }
+<span id="line44"></span>	#save { opacity: 0.25;}
+<span id="line45"></span>	#save[download] { opacity: 1;}
+<span id="line46"></span>	#viz {
+<span id="line47"></span>		height: 80%;
+<span id="line48"></span>		width: 100%;
+<span id="line49"></span>		display: flex;
+<span id="line50"></span>		flex-direction: column;
+<span id="line51"></span>		justify-content: space-around;
+<span id="line52"></span>		align-items: center;
+<span id="line53"></span>	}
+<span id="line54"></span>	@media (orientation: landscape) {
+<span id="line55"></span>		body { flex-direction: row;}
+<span id="line56"></span>		#controls { flex-direction: column; height: 100%; width: 10%;}
+<span id="line57"></span>		#viz { height: 100%; width: 90%;}
+<span id="line58"></span>	}
+<span id="line59"></span>
+<span id="line60"></span>	</span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line61"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line62"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line63"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">viz</a>"&gt;</span><span>
+<span id="line64"></span>		</span><span>&lt;<span class="start-tag">canvas</span> <span class="attribute-name">id</span>="<a class="attribute-value">analyser</a>" <span class="attribute-name">width</span>="<a class="attribute-value">1024</a>" <span class="attribute-name">height</span>="<a class="attribute-value">500</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">canvas</span>&gt;</span><span>
+<span id="line65"></span>		</span><span>&lt;<span class="start-tag">canvas</span> <span class="attribute-name">id</span>="<a class="attribute-value">wavedisplay</a>" <span class="attribute-name">width</span>="<a class="attribute-value">1024</a>" <span class="attribute-name">height</span>="<a class="attribute-value">500</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">canvas</span>&gt;</span><span>
+<span id="line66"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line67"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">controls</a>"&gt;</span><span>
+<span id="line68"></span>		</span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">id</span>="<a class="attribute-value">record</a>" <span class="attribute-name">src</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/img/mic128.png" class="attribute-value">img/mic128.png</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">toggleRecording(this);</a>"&gt;</span><span>
+<span id="line69"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">save</a>" <span class="attribute-name">href</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/index.html#" class="attribute-value">#</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:https://webaudiodemos.appspot.com/AudioRecorder/img/save.svg" class="attribute-value">img/save.svg</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line70"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line71"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line72"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span></span></pre><menu id="actions" type="context"><menuitem accesskey="L" label="Go to Line…" id="goToLine"></menuitem><menuitem type="checkbox" label="Wrap Long Lines" id="wrapLongLines"></menuitem><menuitem checked="true" type="checkbox" label="Syntax Highlighting" id="highlightSyntax"></menuitem></menu></body></html>

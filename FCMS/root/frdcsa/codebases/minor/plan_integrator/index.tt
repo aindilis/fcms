@@ -1,0 +1,5 @@
+We need to be able to have a list of the different plans.
+
+For each step on the list, we have to record whether it is a fixed
+time obligation, or any of its effects are obligations.  And to what
+extent the obligation holds, under what conditions can it be changed.

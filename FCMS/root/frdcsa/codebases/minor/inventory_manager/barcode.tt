@@ -1,0 +1,42 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Resource Manager';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+[% USE SWIPLI -%]
+
+<!-- Main row -->
+<div class="row">
+<!-- Left col -->
+<section class="col-lg-6 connectedSortable">
+<!-- TO DO List -->
+<div class="box box-primary">
+
+<div class="box-body">
+
+<h4>Product Information</h4>
+
+<h3>[% barcode_info.productName %]</h3>
+
+<table>
+<tr>
+<td>
+<img src="[% c.uri_for('/var/lib/myfrdcsa/codebases/minor/inventory-manager/data-git/barcodes/072392339976/upcindex.com/imagedir/http:/i.upcindex.com/i/WjI5dlpaR2syTlM1emFHOXdjR2x1Wnk1amIyMHZhVzFoWjJWekwyUnBMelptTHpNeEx6TXlMemMxTkRRME9USmtORFEzTWpVd05ERTNNVFV5TkdFek5UWXpOakkxTnpjNU56ZzBaalV4TFRNd01IZ3pNREF0TUMwd0xtcHdadz09MnhsYzNWamEzTQ,,.jpg') %]">
+</td>
+<td>
+<pre>
+[% Dumper.dump(barcode_info) %]
+</pre>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<!-- /.box -->
+
+</section>
+<!-- /.Left col -->
+
+</div  >
+<!-- /.row (main row) -->

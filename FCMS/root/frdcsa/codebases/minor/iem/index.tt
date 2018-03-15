@@ -1,0 +1,244 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free Life Planner';
+-%]
+
+[%- USE Dumper %]
+[%- USE SWIPLI %]
+
+[% transformed = SWIPLI.GetList(SWIPLI.GetList(c.stash.plan).0) %]
+[% parsed = transformed.0 %]
+[% goals = transformed.1 %]
+[% steps = transformed.2 %]
+[% tmptmp = steps.shift %]
+
+<script language="javascript">
+  function toggle(i) {
+    var ele = document.getElementById("toggleText" + i);
+    var text = document.getElementById("displayText" + i);
+    if(ele.style.display == "block") {
+      ele.style.display = "none";
+	text.innerHTML = "Expand Task [%- i -%]";
+    } else {
+      ele.style.display = "block";
+	text.innerHTML = "Collapse Task [%- i -%]";
+    }
+  }
+  function toggleAll() {
+    var ele = document.getElementById("toggleTextAll");
+    var text = document.getElementById("displayTextAll");
+    if(ele.style.display == "block") {
+      ele.style.display = "none";
+	text.innerHTML = "Expand All Upcoming Tasks";
+    } else {
+      ele.style.display = "block";
+	text.innerHTML = "Collapse All Upcoming Tasks";
+    }
+  }
+</script>
+
+<!-- Main row -->
+<div class="row">
+  <!-- Left col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="/plan/change-time-frame">Current</a>
+	  <a href="/plan/change-plan-scope">[%- plan_scope FILTER html %]</a>
+	  <a href="/plan">Plan</a>
+	  for <a href="/user">[%- c.stash.user_name FILTER html %]</a>
+	</h3>
+	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a>
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box box-solid">
+	<div class="box-header">
+	  <h3 class="box-title">
+	    <a href="/plan/change-metric">Best</a>
+	    <a href="/plan/change-plan-type">[%- plan_type FILTER html %]</a>
+	    Plan
+	  </h3>
+	</div>
+	<!-- /.box-header -->
+
+
+	<div class="box-body">
+          [%- INCLUDE 'frdcsa/codebases/minor/iem/simple-interface.tt' -%]
+	  [% i = 0 %]
+          <h4><a href="[%- c.uri_for('/planning','tasks') %]">Upcoming Tasks</a>:</h4>
+	  	  
+          <a id="displayTextAll" href="javascript:toggleAll();">Expand All Upcoming Tasks</a>
+          <div id="toggleTextAll" style="display: none">
+            [%- FOREACH tmp IN steps.slice(1,-1) %]
+              [% plandata = SWIPLI.GetList(tmp) %]
+	      [% planstepnumber = plandata.0 %]
+	      [% NEXT IF planstepnumber <= current_plan_step_number %]
+	      [% planstep = plandata.1 %]
+	      [% tmp333 = planstep.shift %]
+	      
+ 	      <a id="displayText[%- i + 1 -%]" href="javascript:toggle([%- i + 1 -%]);">Expand Task [%- i + 1 -%]</a>
+	      <div id="toggleText[%- i + 1 -%]" style="display: none">
+                [% i = i + 1 %]
+                <ul class="todo-list">
+  	        <li>
+  	          <!-- drag handle -->
+  	          <span class="handle">
+  	      	<i class="fa fa-ellipsis-v"></i>
+  	      	<i class="fa fa-ellipsis-v"></i>
+  	          </span>
+  	          <!-- checkbox -->
+  	          <input type="checkbox" value="" name="">
+  	          <!-- todo text -->
+  	          <span class="text">
+   	    	[%- planstep.4.4 %] to [%- planstep.4.6 %]<br>
+  	    
+  	      	[%- IF c.stash.verbose %]
+  	    	  [%- planstep.3.1 %]
+  	      	[%- ELSE %]
+    	    	  [%- planstep.3.2 %]
+  	      	[%- END %]
+  	      	[%- IF c.stash.seePDDL %]
+  	      	<br>([%- FOREACH token IN planstep.1 %] &nbsp; <a href="[% c.uri_for('/ontology',token.lower)%]">[%- token FILTER lower, html %]</a> &nbsp; [%- END %])
+  	      	[%- END %]
+  	      	<!-- Emphasis label -->
+  	      	<small class="label label-[%- IF planstep.0 < 1 %]danger[%- ELSIF planstep.0 < 5 %]warning[%- ELSIF planstep.0 < 24 %]primary[%- ELSE %]info[%- END %]"><i class="fa fa-clock-o"></i> [%- planstep.2 FILTER html %] hrs</small>
+  	      	<!-- General tools such as edit or delete-->
+  	      
+  	      	&nbsp;&nbsp;&nbsp;&nbsp;
+  	      	<div class="tools">
+  	      	  <i class="fa fa-edit"></i>
+  	      	  <i class="fa fa-trash-o"></i>
+  	      	</div>
+                    </span>
+  	        </li>
+                </ul>
+  	      
+                 <!-- <a id="toggle-extra-care-[%- i -%]" class="btn btn-default pull-left" href="#extra-care-[%- i -%]"><i class="fa fa-plus"></i> Look at Pre/Post </a><br><br> -->
+                <div id="extra-care-[%- i -%]">
+  	        <ul>
+  	          <li>
+  	      	<b>Before</b> performing the action of <em>[%- planstep.1.1 -%]</em>, please indicate which (if any) of the following requirements are currently not met:
+  	      	<ul>
+  	      	  <li>
+  	      	    When the task is started:
+  	      	    <ul class="todo-list">
+  	      	      [%- tmp1 = planstep.4.1.shift -%]
+  	    	      [% i = 1 %]
+  	      	      [%- FOREACH precondition IN planstep.4.1 -%]
+  	      	      <li>
+  	      		<!-- checkbox -->
+  	    		<input type="checkbox" name="precondition-[% i %]" value="satisfied" [% precondition.2 %]>
+  	    		[% precondition.1 %]
+  	      		&nbsp;
+  	      		<i class="fa fa-hand-stop-o"></i>
+  	      		<i class="fa fa-question"></i>
+  	      	      </li>
+  	    	      [% i = i + 1 %]
+  	      	      [%- END -%]
+  	      	    </ul>
+  	      	  </li>
+  	      	</ul>
+  	          </li>
+  	        </ul>
+  	        <ul>	    
+  	          <li>
+  	      	<b>Before</b> starting the task, please indicate which (if any) of the following results cannot be met upon completion of the action:
+  	      	<ul>
+  	      	  <li>
+  	      	    When the task is completed:
+  	      	    <ul class="todo-list">
+  	      	      [%- tmp2 = planstep.4.2.shift -%]
+  	      	      [%- FOREACH effect IN planstep.4.2 -%]
+  	      	      <li>
+  	      		<!-- checkbox -->
+  	      		<input type="checkbox" value="" name="">
+  	      		[% effect %]
+  	      		&nbsp;
+  	      		<i class="fa fa-hand-stop-o"></i>
+  	      		<i class="fa fa-question"></i>
+  	      	      </li>
+  	      	      [%- END -%]
+  	      	     </ul>
+  	      	    </li>
+                     </ul>
+  	            </li>
+                  </ul>
+                 </li>
+                </ul>
+              </div>
+            [%- END -%]
+	  </div>
+        </div>
+	<!-- /.box-body -->
+	<div class="box-footer clearfix no-border">
+	  <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+	</div>
+
+      </div>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Left col -->
+
+  <!-- Right col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="[% c.uri_for('') %]">Objectives</a>
+	</h3>
+	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a>
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box-body">
+	<form action="[% c.uri_for('new_objective') %]" method="POST">
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>New Objectives</button>
+	  <input type="text" name="new-objective" size=60>
+	  <br><br>
+          <ul class="todo-list">
+  	    [%- tmp = goals.shift -%]
+  	    [%- FOREACH goal IN goals -%]
+  	    <li>
+  	      <!-- drag handle -->
+  	      <span class="handle">
+  	        <i class="fa fa-ellipsis-v"></i>
+  		<i class="fa fa-ellipsis-v"></i>
+  	      </span>
+  	      <!-- checkbox -->
+  	      <input type="checkbox" value="" name="">
+  	      <!-- todo text -->
+  	      <span class="text">
+  	        [% goal.2 %]
+  		<!-- General tools such as edit or delete-->
+  
+  		&nbsp;&nbsp;&nbsp;&nbsp;
+  		<div class="tools">
+  		  <i class="fa fa-edit"></i>
+  		  <i class="fa fa-trash-o"></i>
+  		</div>
+                </span>
+  	    </li>
+  	    [%- END -%]
+          </ul>
+	  <br>
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>Remove</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Right col -->
+
+</div>

@@ -1,0 +1,44 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+[% IF query_result %]
+[% Dumper.dump(query_result) %]
+[% END %]
+
+[% tmp = c.stash.results.1.shift  %]
+[% output = c.stash.results.1.hash %]
+[% tmp = output.unpreparedForContingency.shift %]
+[% tmp = output.preparedForContingency.shift %]
+
+<!-- Main row -->
+  <div class="box-body">
+    <!-- Left col -->
+    <section class="col-lg-6 connectedSortable">
+      <!-- TO DO List -->
+
+      <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#unpreparedFor" data-toggle="tab">Unprepared For Contingencies</a></li>
+        <li><a href="#preparedFor" data-toggle="tab">Prepared For Contingencies</a></li>
+      </ul>
+      <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+     
+      <div class="tab-content">
+        <div class="tab-pane active" id="unpreparedFor">
+	  [%- INCLUDE 'frdcsa/codebases/minor/free_wopr/unprepared_for.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+        <div class="tab-pane" id="preparedFor">
+	  [%- INCLUDE 'frdcsa/codebases/minor/free_wopr/prepared_for.tt' -%]
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+
+    </section>
+    <!-- /.Left col -->
+
+  </div>
+  <!-- /.row (main row) -->

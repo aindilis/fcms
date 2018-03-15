@@ -1,0 +1,21 @@
+<h4>Prepared For Contingencies &nbsp; <a href="[%- c.uri_for('') %]"><small><i class="fa fa-edit"></i></small></a>:</h4>
+[%- FOREACH contingency IN output.preparedForContingency %]
+  [% contingencyProlog = c.model('FRDCSA').Convert('Input', [contingency], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+  [% matches = contingencyProlog.match('(.+?)\.?\n?$') %]
+  <a href="[%- c.uri_for('/ontology',matches.0) %]">[%- matches.0 -%]</a> <br>
+
+  <form action="[% c.uri_for('new_solution') %]" method="post">
+    <div class="box-footer">
+	<div class="input-group">
+          <input type="hidden" name="contingency" value="[% matches.0 %]">
+ 	  <!--
+ 	    <div class="input-group-btn">
+	      <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+            </div>
+	  -->
+	</div>
+    </div>
+  </form>
+  <br>
+  </b>
+[%- END %]

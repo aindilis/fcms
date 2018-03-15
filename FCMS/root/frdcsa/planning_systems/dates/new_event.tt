@@ -1,0 +1,44 @@
+<!-- Main row -->
+<div class="row">
+  <!-- left col (We are only adding the ID to make the widgets sortable)-->
+  <section class="col-lg-6 connectedSortable">
+
+    <!-- Chat box -->
+    <div class="box box-success">
+      <div class="box-header">
+	<i class="fa fa-comments-o"></i>
+
+	<h3 class="box-title">
+	  <a href="[% c.uri_for('/frdcsa','planning_systems','dates') %]">Dates</a>
+	</h3>
+      </div>
+      <div class="box-body">
+        <form action="[% c.uri_for('new_event') %]" method="post">
+          <div class="box-footer">
+            <div class="input-group">
+	      <input name="date" type="text" id="datepicker" size=90 placeholder="Date"><br><br>
+      	      <input name="specification" size=90 placeholder="Specification"><br><br>
+      	      <input name="participants" size=90 placeholder="Participants"><br><br>
+      	      <input name="agenda" size=90 placeholder="Agenda"><br><br>
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-success pull-left">
+		  <i class="fa fa-plus"></i>
+	        </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!doctype html>
+<html lang="en">
+<head>
+  </head>
+
+  <body>
+
+  </body>
+</html>

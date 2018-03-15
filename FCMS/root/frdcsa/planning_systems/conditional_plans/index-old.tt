@@ -1,0 +1,246 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free Life Planner';
+-%]
+
+[%- USE Dumper %]
+<!-- Main row -->
+<div class="row">
+  <!-- Left col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="/plan/change-time-frame">Current</a>
+	  <a href="/plan/change-plan-scope">[%- c.stash.plan_scope FILTER html %]</a>
+	  <a href="/plan">Plan</a>
+	  for <a href="/user">[%- c.stash.user_name FILTER html %]</a>
+	</h3>
+	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a>
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box-body">
+	<h4>Objectives &nbsp; <a href="[%- c.uri_for('/planning','objectives') %]"><small><i class="fa fa-edit"></i></small></a>:</h4>
+	<ul class="todo-list">
+	  <li>
+	    <!-- drag handle -->
+	    <span class="handle">
+	      <i class="fa fa-ellipsis-v"></i>
+	      <i class="fa fa-ellipsis-v"></i>
+	    </span>
+	    <!-- checkbox -->
+	    <input type="checkbox" value="" name="">
+	    <!-- todo text -->
+	    <span class="text">
+	      <b>
+		[%- FOREACH goal IN c.stash.problem.object.Goals.values %]
+		[%- FOREACH token IN goal %]
+		<a href="[%- c.uri_for('/ontology',token.lc) %]">[%- token %]</a> &nbsp;
+		[%- END %]
+		<br>
+		[%- END %]
+	      </b>
+	    </span>
+	  </li>
+	</ul>
+      </div>
+
+      <div class="box box-solid">
+	<div class="box-header">
+	  <h3 class="box-title">
+	    <a href="/plan/change-metric">Best</a>
+	    <a href="/plan/change-plan-type">[%- c.stash.plan_type FILTER html %]</a>
+	    Plan
+	  </h3>
+	</div>
+	<!-- /.box-header -->
+
+	<div class="box-body">
+	  <h4><a href="[%- c.uri_for('/planning','current-task') %]">Current Task</a>:</h4>
+	  <ul class="todo-list">
+	    <li>
+	      <!-- drag handle -->
+	      <span class="handle">
+		<i class="fa fa-ellipsis-v"></i>
+		<i class="fa fa-ellipsis-v"></i>
+	      </span>
+	      <!-- checkbox -->
+	      <input type="checkbox" value="" name="">
+	      <!-- todo text -->
+	      <span class="text">
+		<b>
+		  [%- FOREACH planstep IN c.stash.plan.slice(0,0) %]
+		  [%- IF c.stash.verbose %]
+		  [%- planstep.3.0 %]
+		  [%- ELSE %]
+		  [%- planstep.3.1 %]
+		  [%- END %]
+		  [%- IF c.stash.seePDDL %]
+		  <br>([%- FOREACH token IN planstep.1 %] &nbsp; <a href="[% c.uri_for('/ontology',token.lower)%]">[%- token FILTER lower, html %]</a> &nbsp; [%- END %])
+		  [%- END %]
+		  [%- END %]
+		</b>
+	      </span>
+
+	      <!-- Emphasis label -->
+	      <small class="label label-[%- IF planstep.0 < 1 %]danger[%- ELSIF planstep.0 < 5 %]warning[%- ELSIF planstep.0 < 24 %]primary[%- ELSE %]info[%- END %]"><i class="fa fa-clock-o"></i> [%- planstep.2 FILTER html %] hrs</small>
+	      <!-- General tools such as edit or delete-->
+
+	      <div class="tools">
+		<i class="fa fa-edit"></i>
+		<i class="fa fa-trash-o"></i>
+	      </div>
+	    </li>
+	  </ul>
+	  <!-- <a id="toggle-extra-care" class="btn btn-default pull-left" href="#"><i class="fa fa-plus"></i> I Want To Do This </a> -->
+	  <a class="btn btn-default pull-right" href="[%- c.uri_for('/ontology','dont-want-to') %]">
+	    <i class="fa fa-plus"></i> I Don't Want to Do This
+	  </a>
+	  <a class="btn btn-default pull-right" href="[%- c.uri_for('/ontology','spse2') %]">
+	    <i class="fa fa-plus"></i> Why Should I Do This?
+	  </a>
+	  <br><br>
+	  <div id="extra-care">
+	    <ul>
+	      <li>
+		<b>Before</b> performing the action of <a href="/ontology/lock-container">locking the container</a>, please select the following requirements which are currently met:
+		<ul>
+		  <li>
+		    When the task is started:
+		    <ul class="todo-list">
+		      <li>
+			<!-- checkbox -->
+			<input type="checkbox" value="" name="">
+			the <a href="/ontology/laptop-backpack">Laptop Backpack</a> <a href="/ontology/prohibition"><em>must not be</em></a> <a href="/ontology/locked-container">locked</a>
+			[%- IF c.stash.seePDDL %]
+			&nbsp;
+			<small>i.e. <em>(not (locked laptop-backpack))</em></small>
+			[%- END %]
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		      <li>
+			<!-- checkbox -->
+			<input type="checkbox" value="" name="">
+			<a href="/ontology/andrew-dougherty">Andrew Dougherty</a> <a href="/ontology/obligation"><em>must be</em></a> <a href="/ontology/at-location">in</a> the <a href="/ontology/den">Den</a>
+			[%- IF c.stash.seePDDL %]
+			&nbsp;
+			<small>i.e. <em>(at-location andrew-dougherty den)</em></small>
+			[%- END %]
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		      <li>
+			<!-- checkbox -->
+			<input type="checkbox" value="" name="">
+			the <a href="/ontology/laptop-backpack">Laptop Backpack</a> <a href="/ontology/obligation"><em>must be</em></a> <a href="/ontology/at-location">in</a> the <a href="/ontology/den">Den</a>
+			[%- IF c.stash.seePDDL %]
+			&nbsp;
+			<small>i.e. <em>(at-location laptop-backpack den)</em></small>
+			[%- END %]
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		    </ul>
+		  </li>
+		</ul>
+	      </li>
+	    </ul>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','can-start') %]">Am Able to Start Task (even if some are not met), but Won't Until I Complete the Next Section </a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','cannot-start') %]">Am Unable to Start Task</a>
+	    </button>
+	    <br><br>
+	    <ul>	    
+	      <li>
+		<b>Before</b> starting the task, please make sure you can achieve the following results:
+		<ul>
+		  <li>
+		    When the task is completed:
+		    <ul class="todo-list">
+		      <li>
+			<!-- checkbox -->
+			<input type="checkbox" value="" name="">
+			the <a href="[% c.uri_for('/ontology','laptop-backpack') %]">Laptop Backpack</a> <a href="[% c.uri_for('/ontology','will-be') %]">will be</a> <a href="[% c.uri_for('/ontology','locked-container') %]'">locked</a>
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		    </ul>
+		</ul>
+	      </li>
+	    </ul>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','starting-task') %]">All True, Starting Task</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','how-do-i-perform-this-task') %]">How Do I Do This Task?</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus red"></i> <a href="[% c.uri_for('/planning','current-task','cannot-start-task')%]">Cannot Start Task</a>
+	    </button>
+
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="abort">Abort</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="cancel">Cancel</a>
+	    </button>
+	  </div>
+	</div>
+
+	<div class="box-body">
+	  <h4><a href="[%- c.uri_for('/planning','tasks') %]">Upcoming Tasks</a>:</h4>
+	  <ul class="todo-list">
+	    [%- FOREACH planstep IN c.stash.plan.slice(1,-1) %]
+	    <li>
+	      <!-- drag handle -->
+	      <span class="handle">
+		<i class="fa fa-ellipsis-v"></i>
+		<i class="fa fa-ellipsis-v"></i>
+	      </span>
+	      <!-- checkbox -->
+	      <input type="checkbox" value="" name="">
+	      <!-- todo text -->
+	      <span class="text">
+		[%- IF c.stash.verbose %]
+		[%- planstep.3.0 %]
+		[%- ELSE %]
+		[%- planstep.3.1 %]
+		[%- END %]
+		[%- IF c.stash.seePDDL %]
+		<br>([%- FOREACH token IN planstep.1 %] &nbsp; <a href="[% c.uri_for('/ontology',token.lower)%]">[%- token FILTER lower, html %]</a> &nbsp; [%- END %])
+		[%- END %]
+		<!-- Emphasis label -->
+		<small class="label label-[%- IF planstep.0 < 1 %]danger[%- ELSIF planstep.0 < 5 %]warning[%- ELSIF planstep.0 < 24 %]primary[%- ELSE %]info[%- END %]"><i class="fa fa-clock-o"></i> [%- planstep.2 FILTER html %] hrs</small>
+		<!-- General tools such as edit or delete-->
+		<div class="tools">
+		  <i class="fa fa-edit"></i>
+		  <i class="fa fa-trash-o"></i>
+		</div>
+	    </li>
+	    [%- END %]
+	  </ul>
+	</div>
+
+	<!-- /.box-body -->
+	<div class="box-footer clearfix no-border">
+	  <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+	</div>
+
+      </div>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Left col -->
+</div>

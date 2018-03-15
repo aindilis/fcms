@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-default pull-left">
+  <i class="fa fa-plus"></i> <a href="zxing://scan/?ret=[% c.uri_for('add_pantry','{CODE}') %]&SCAN_FORMATS=UPC_A,EAN_13">Add Pantry Item</a>
+</button>
+<!-- <a href="zxing://scan/?ret=[% c.uri_for('add_pantry','{CODE}') %]&SCAN_FORMATS=UPC_A,EAN_13" class="btn btn-default pull-left">Add Pantry Item</a> -->
+
+<script>
+  function addBarcodeToPantrySubmit(){
+    var action_src = "[% c.uri_for('add_pantry') %]/" + document.getElementsByName("barcode")[0].value;
+    var your_form = document.getElementById('add_barcode_to_pantry');
+    your_form.action = action_src ;
+  }
+</script>
+
+<form id="add_barcode_to_pantry" method="POST" onsubmit="addBarcodeToPantrySubmit()">
+  <input type="text" name="barcode" autofocus>
+  <input type="submit" value="Add Barcode to Pantry">
+</form>

@@ -1,0 +1,10 @@
+Add a search here for searching through all of the domains.
+
+Add the list of selected objectives from different planning domains.
+
+Somehow integrate the action planner here, specifically the suggestions etc.
+Work on computational semantics and textual entailment.
+
+[%- FOREACH context IN c.stash.spse2_domains %]
+<p>[%- context %]</p>
+[%- END %]

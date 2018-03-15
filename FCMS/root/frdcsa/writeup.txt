@@ -1,0 +1,32 @@
+Assume the following:
+
+TR	:= the set of all total-recursive functions
+PR	:= the set of all partial-recursive functions
+S	undecidable  logic
+L_S	the class of formulae in the language of S
+G	G in PR and G:L_S->N
+	(partial-recursive bijection from  formulae in L_S to integers)
+Th(S)   := {Phi:  S |=  Phi}
+	(true formulae in L)
+GTh(S,G):= {G(Phi) : Phi in Th(S)}
+	(the godel numbers of valid formula in S)
+Enum(p in TR, C) := the set of integers which are enumerated by the function p
+Len(p) := the number of symbols in the definition of p
+K(p in TR,C)  := mu.len(q) (q in TR and Enum(q,U) = Enum(p,C))
+	(the size of the smallest recursive function that enumerates the same interger sequence as p)
+D(p,S,L_S,G,C) := {G(Phi): (Phi in L_S and G(Phi) in Enum(p,C) xor G(!Phi) in Enum(p,C))}
+Stronger(p,q) iff (subset-of 
+	           Intersection(D(q,S,L_S,G,C),GTh(S,G))
+	 	   Intersection(D(p,S,L_S,G,C),GTh(S,G)))
+Larger(p,q) iff (K(p,C) > K(q,C))
+
+Then                     Also,		       
+			 		       
+(forall p in TR		 (not		       
+ (exists q in TR 	  (forall p in TR       
+  (and			   (exists q in TR      
+   (Larger(q,p))	    (and		       
+   (Stronger(q,p)))))	     (not Larger(q,p))  
+			     (Stronger(q,p))))))
+
+# to be continued

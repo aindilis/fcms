@@ -1,0 +1,5 @@
+(get battery level ())
+(capture audio (/var/lib/myfrdcsa/codebases/minor/fcms/FCMS/abilities/https:_webaudiodemos.appspot.com_AudioRecorder_index.html))
+(capture image ())
+(capture barcode (http://dev.freelifeplanner.org/frdcsa/codebases/minor/inventory_manager/pantry))
+(get location (http://dev.freelifeplanner.org/frdcsa/codebases/minor/location_logic))

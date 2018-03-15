@@ -1,0 +1,55 @@
+      <div class="logo">
+
+        <img width=700 src="static/images/bytelibrary_logo.jpg" alt="the ByteLibrary">
+
+        <!--
+
+	<p class="lead">
+
+          Fully-Loaded New and Refurbished Computers with Debian GNU+Linux Operating System
+
+        </p>
+
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Learn More</a></p>
+
+        -->
+
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Ginormous Collection of Software and Resources</h2>
+          <p>
+
+	    Comes preloaded with an amazing curated collection of free/libre
+	    software, software packages and data resources.
+
+          </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Large Media</h2>
+          <p>
+
+	  All of these resources have been painstakingly collected,
+	  verified and assembled into the media of your choice, such
+	  as one or more spacious 5 TB or better hard drives, or for
+	  smaller subcollections, Blu-ray, SSD and/or Flash Media.
+
+          </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Online Updates</h2>
+          <p>
+
+            Software is also available in our online repositories.  We
+            have a subscription-based package repository for the
+            latest packages, and a free torrent-based repository where
+            all new software, packages and data goes after a brief delay.
+
+          </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>

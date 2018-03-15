@@ -1,0 +1,80 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'World State Monitor';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+[% USE SWIPLI -%]
+
+[%- items = SWIPLI.GetList(results2) -%]
+
+<!--
+[%- Dumper.dump(results2) -%] 
+[%- Dumper.dump(items) -%]
+-->
+
+<!-- Main row -->
+<div class="row">
+  <!-- Left col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="[% c.uri_for('') %]">WSM Checklist</a>
+	</h3>
+	<!--	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a> -->
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box-body">
+	<form action="[% c.uri_for('update_wsm') %]" method="POST">
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp;Update WSM</button>
+	  <input type="text" name="update-wsm" size=60>
+	  <br><br>
+          <ul class="todo-list">
+          [%- i = 0 %]
+	  [%  FOREACH tmp IN SWIPLI.GetList(items.0) %]
+	  <!--  [%- Dumper.dump(tmp) -%] -->
+          <li>
+  	      <!-- drag handle -->
+  	      <span class="handle">
+  	        <i class="fa fa-ellipsis-v"></i>
+  		<i class="fa fa-ellipsis-v"></i>
+              </span>	     
+
+  	      <!-- checkbox -->
+	      True:   <input type="radio" name="radio[%- i -%]" value="true"[%- IF checked -%] checked[%- END %]>
+	      False:   <input type="radio" name="radio[%- i -%]" value="false"[%- IF checked -%] checked[%- END %]>
+
+  	      <span class="text">
+                <form action="[%- c.uri_for('self','create') %]" method="get">
+                <button type="submit" name="submit" id="btn-[%- tmp.1 %]" class="btn btn-default btn-flat pull-left">
+                [%- tmp.1 | html %]
+                </button>	
+                <input type="hidden" name="pred" value="[%- tmp.Predicate | html %]">
+                [%- j = 1 %]
+                [%- FOREACH arg IN SWIPLI.GetList(tmp.2) %]
+                <input type="text" name="arg-[%- j %]" class="freekbs2-completion" placeholder="[%- arg.2 | html %]">
+                [%- j = j + 1 %]
+                [%- END %]
+                <input type="hidden" name="arity" value="[%- j - 1 | html %]">
+                </form>
+  	      </span>
+              [%- i = i + 1 %]
+          </li>
+          [%- END %]
+          </ul>
+	  <br>
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp;Update WSM</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Left col -->
+
+</div>

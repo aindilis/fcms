@@ -1,0 +1,202 @@
+<table width="600">
+<tr>
+<td>
+
+<h3>Want to install the FRDCSA?</h3>
+
+<p><b>PLEASE NOTE THAT THE INSTALLER IS NOT YET PUBLICLY
+AVAILABLE.</b> If you would like to help expedite the process of
+completing the public release of the FRDCSA, please consider donating
+to the project <a href="">here</a>.
+
+<h4>FRDCSA INSTALLATION HOWTO</h4>
+
+<p>The FRDCSA Installer is still very alpha, as is the FRDCSA itself.
+Here are the instructions to install it.  <b>Please note that
+currently the installer is password protected.  You need the password
+to download the installer.</b></p>
+
+<p>After reading this howto, you can download the installer by filling
+out the form at the bottom of the page.  It will generate the
+appropriate configuration file for your installation.</p>
+
+<p>
+...
+</p>
+
+<h4>FORM</h4>
+
+<form action="[%- c.uri_for('i_want_my_own_frdcsa/generate_config') -%]" method="post">
+
+First name:<p>
+<input type="text" name="fname"><p><hr>
+
+Last name:<p>
+<input type="text" name="lname"><p><hr>
+
+Password:<p>
+<input type="text" name="password"><p><hr>
+
+<!-- normal -->
+Do you want to set up the FRDCSA itself, or the entire FRDCSA Project Development Infrastructure for developing your own FRDCSA-derivative system? <em>(Caution: the infrastructure is very large)</em><p>
+<select name="frdcsa_or_frdcsa_infrastructure">
+<option value="frdcsa" selected>frdcsa</option>
+<option value="frdcsa_infrastructure">frdcsa_infrastructure</option>
+</select><p><hr>
+
+<!-- normal -->
+Should the network be used during installation?<p>
+<select name="use_network">
+<option value="true" selected>true</option>
+<option value="false">false</option>
+</select><p><hr>
+
+<div>
+<!-- normal -->
+
+Since you have selected that the network is not to be used to complete
+the installation, you need to have a mirror of CPAN.  (It is best to
+copy the mirror the hard disk and then mount it and have the script
+access the directory.)  If you don't already have one, it may be
+downloaded here:
+
+<ul>
+<li><b>CPAN [Official]</b>
+<ul>
+<li><b>20151214</b>
+<ul>
+<li><a href="minicpan-20151214.udf">minicpan-20151214.udf</a>
+</ul>
+</ul>
+<li><b>CPAN [Mirror]</b>
+<ul>
+<li><b>20151214</b>
+<ul>
+<li><a href="minicpan-20151214.udf">minicpan-20151214.udf</a>
+</ul>
+</ul>
+</ul>
+
+
+Which directory is the cpan mirror going to be mounted in?<p>
+<input type="text" width="120" name="cpan_mirror_directory"><p><hr>
+
+You also need to have the Debian installation media (it is not yet
+known whether the install will succeed with any distribution besides
+Debian).  It is also best to copy the media to the hard drive and then
+mount and add to the /etc/apt/sources.list file.  Debian may be
+downloaded here:
+
+<ul>
+<li><b>Debian [Official]</b>
+<ul>
+<li><b>Jessie</b>
+<ul>
+<li><b>8.2</b>
+<ul>
+<li>i386
+<ul>
+<li><a href="debian-8.2.0-i386-BD-1.iso">debian-8.2.0-i386-BD-1.iso</a>
+<li><a href="debian-8.2.0-i386-BD-2.iso">debian-8.2.0-i386-BD-2.iso</a>
+<li><a href="debian-8.2.0-i386-BD-3.iso">debian-8.2.0-i386-BD-3.iso</a>
+</ul>
+<li>AMD64
+<ul>
+<li><a href="debian-8.2.0-amd64-BD-1.iso">debian-8.2.0-amd64-BD-1.iso</a>
+<li><a href="debian-8.2.0-amd64-BD-3.iso">debian-8.2.0-amd64-BD-3.iso</a>
+<li><a href="debian-8.2.0-amd64-BD-2.iso">debian-8.2.0-amd64-BD-2.iso</a>
+</ul>
+<li>Source
+<ul>
+<li><a href="debian-8.2.0-source-BD-1.iso">debian-8.2.0-source-BD-1.iso</a>
+<li><a href="debian-8.2.0-source-BD-2.iso">debian-8.2.0-source-BD-2.iso</a>
+</ul>
+</ul>
+<li><b>8.0</b>
+<ul>
+<li>AMD64
+<ul>
+<li><a href="debian-8.0.0-amd64-BD-1.iso">debian-8.0.0-amd64-BD-1.iso</a>
+<li><a href="debian-8.0.0-amd64-BD-2.iso">debian-8.0.0-amd64-BD-2.iso</a>
+<li><a href="debian-8.0.0-amd64-BD-3.iso">debian-8.0.0-amd64-BD-3.iso</a>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><b>Debian [Mirror]</b>
+<ul>
+<li><b>Jessie</b>
+<ul>
+<li><b>8.2</b>
+<ul>
+<li>i386
+<ul>
+<li><a href="debian-8.2.0-i386-BD-1.iso">debian-8.2.0-i386-BD-1.iso</a>
+<li><a href="debian-8.2.0-i386-BD-2.iso">debian-8.2.0-i386-BD-2.iso</a>
+<li><a href="debian-8.2.0-i386-BD-3.iso">debian-8.2.0-i386-BD-3.iso</a>
+</ul>
+<li>AMD64
+<ul>
+<li><a href="debian-8.2.0-amd64-BD-1.iso">debian-8.2.0-amd64-BD-1.iso</a>
+<li><a href="debian-8.2.0-amd64-BD-3.iso">debian-8.2.0-amd64-BD-3.iso</a>
+<li><a href="debian-8.2.0-amd64-BD-2.iso">debian-8.2.0-amd64-BD-2.iso</a>
+</ul>
+<li>Source
+<ul>
+<li><a href="debian-8.2.0-source-BD-1.iso">debian-8.2.0-source-BD-1.iso</a>
+<li><a href="debian-8.2.0-source-BD-2.iso">debian-8.2.0-source-BD-2.iso</a>
+</ul>
+</ul>
+<li><b>8.0</b>
+<ul>
+<li>AMD64
+<ul>
+<li><a href="debian-8.0.0-amd64-BD-1.iso">debian-8.0.0-amd64-BD-1.iso</a>
+<li><a href="debian-8.0.0-amd64-BD-2.iso">debian-8.0.0-amd64-BD-2.iso</a>
+<li><a href="debian-8.0.0-amd64-BD-3.iso">debian-8.0.0-amd64-BD-3.iso</a>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+<p>
+
+What is the pattern that the directories will match?<p>
+<input type="text" width="120" name="cpan_mirror_directory"><p><hr> 
+
+<!-- normal -->
+Is this to be installed on a Vagrant virtual machine or on a regular physical computer?<p>
+<select name="type_of_machine">
+<option value="physical">physical</option>
+<option value="vagrant">vagrant</option>
+</select><p><hr>
+
+<!-- advanced -->
+Is this an installation of the MyFRDCSA or the MyFRDCSA-Private?<p>
+<select name="privacy">
+<option value="myfrdcsa" selected>myfrdcsa</option>
+<option value="myfrdcsa-private">myfrdcsa-private</option>
+</select><p><hr>
+
+<!-- advanced -->
+Update repositories upon every (re)invocation of script?<p>
+<select name="update">
+<option value="true">true</option>
+<option value="false" selected>false</option>
+</select><p><hr>
+
+<!-- advanced -->
+Use-Force to Install Packages?<p>
+<select name="update">
+<option value="true" selected>true</option>
+<option value="false">false</option>
+</select><p><hr>
+
+<input type="submit" value="Download Installer">
+<!-- frdcsa-installer-1.sh -->
+</form>
+
+</td>
+</tr>
+</table>

@@ -1,0 +1,1013 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Included Games
+        <small></small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="bs-example">
+	<div class="table-responsive"> 
+	  <table class="table table-bordered">
+            <tbody>
+
+	      <tr>
+		<td><center><img src="images/thumbnails/x11-apps.png"><br>x11-apps</center></td>
+		<td><center><img src="images/thumbnails/gnuchess.png"><br>gnuchess</center></td>
+		<td><center><img src="images/thumbnails/gnome-games.png"><br>gnome-games</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/aisleriot.png"><br>aisleriot</center></td>
+		<td><center><img src="images/thumbnails/gnome-sudoku.png"><br>gnome-sudoku</center></td>
+		<td><center><img src="images/thumbnails/iagno.png"><br>iagno</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/quadrapassel.png"><br>quadrapassel</center></td>
+		<td><center><img src="images/thumbnails/glchess.png"><br>glchess</center></td>
+		<td><center><img src="images/thumbnails/mahjongg.png"><br>mahjongg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnomine.png"><br>gnomine</center></td>
+		<td><center><img src="images/thumbnails/gnotravex.png"><br>gnotravex</center></td>
+		<td><center><img src="images/thumbnails/gnome-about.png"><br>gnome-about</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/qstat.png"><br>qstat</center></td>
+		<td><center><img src="images/thumbnails/kpat.png"><br>kpat</center></td>
+		<td><center><img src="images/thumbnails/ktuberling.png"><br>ktuberling</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kmahjongg.png"><br>kmahjongg</center></td>
+		<td><center><img src="images/thumbnails/katomic.png"><br>katomic</center></td>
+		<td><center><img src="images/thumbnails/kshisen.png"><br>kshisen</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kmines.png"><br>kmines</center></td>
+		<td><center><img src="images/thumbnails/ktouch.png"><br>ktouch</center></td>
+		<td><center><img src="images/thumbnails/knetwalk.png"><br>knetwalk</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kbattleship.png"><br>kbattleship</center></td>
+		<td><center><img src="images/thumbnails/kolf.png"><br>kolf</center></td>
+		<td><center><img src="images/thumbnails/konquest.png"><br>konquest</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kreversi.png"><br>kreversi</center></td>
+		<td><center><img src="images/thumbnails/kbounce.png"><br>kbounce</center></td>
+		<td><center><img src="images/thumbnails/klines.png"><br>klines</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kspaceduel.png"><br>kspaceduel</center></td>
+		<td><center><img src="images/thumbnails/kgoldrunner.png"><br>kgoldrunner</center></td>
+		<td><center><img src="images/thumbnails/ktron.png"><br>ktron</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kblackbox.png"><br>kblackbox</center></td>
+		<td><center><img src="images/thumbnails/lskat.png"><br>lskat</center></td>
+		<td><center><img src="images/thumbnails/kjumpingcube.png"><br>kjumpingcube</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/blinken.png"><br>blinken</center></td>
+		<td><center><img src="images/thumbnails/khangman.png"><br>khangman</center></td>
+		<td><center><img src="images/thumbnails/ksudoku.png"><br>ksudoku</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kanagram.png"><br>kanagram</center></td>
+		<td><center><img src="images/thumbnails/gnugo.png"><br>gnugo</center></td>
+		<td><center><img src="images/thumbnails/kbreakout.png"><br>kbreakout</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kapman.png"><br>kapman</center></td>
+		<td><center><img src="images/thumbnails/kblocks.png"><br>kblocks</center></td>
+		<td><center><img src="images/thumbnails/bomber.png"><br>bomber</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/palapeli.png"><br>palapeli</center></td>
+		<td><center><img src="images/thumbnails/ksirk.png"><br>ksirk</center></td>
+		<td><center><img src="images/thumbnails/kdiamond.png"><br>kdiamond</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kigo.png"><br>kigo</center></td>
+		<td><center><img src="images/thumbnails/kubrick.png"><br>kubrick</center></td>
+		<td><center><img src="images/thumbnails/granatier.png"><br>granatier</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kollision.png"><br>kollision</center></td>
+		<td><center><img src="images/thumbnails/bovo.png"><br>bovo</center></td>
+		<td><center><img src="images/thumbnails/kiriki.png"><br>kiriki</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kfourinline.png"><br>kfourinline</center></td>
+		<td><center><img src="images/thumbnails/killbots.png"><br>killbots</center></td>
+		<td><center><img src="images/thumbnails/ksquares.png"><br>ksquares</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kteatime.png"><br>kteatime</center></td>
+		<td><center><img src="images/thumbnails/amor.png"><br>amor</center></td>
+		<td><center><img src="images/thumbnails/klickety.png"><br>klickety</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnome-chess.png"><br>gnome-chess</center></td>
+		<td><center><img src="images/thumbnails/ksame.png"><br>ksame</center></td>
+		<td><center><img src="images/thumbnails/kajongg.png"><br>kajongg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/linuxlogo.png"><br>linuxlogo</center></td>
+		<td><center><img src="images/thumbnails/frozen-bubble.png"><br>frozen-bubble</center></td>
+		<td><center><img src="images/thumbnails/cowsay.png"><br>cowsay</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/extremetuxracer.png"><br>extremetuxracer</center></td>
+		<td><center><img src="images/thumbnails/bsdgames.png"><br>bsdgames</center></td>
+		<td><center><img src="images/thumbnails/sl.png"><br>sl</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/supertuxkart.png"><br>supertuxkart</center></td>
+		<td><center><img src="images/thumbnails/supertux.png"><br>supertux</center></td>
+		<td><center><img src="images/thumbnails/freeciv-server.png"><br>freeciv-server</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gcompris.png"><br>gcompris</center></td>
+		<td><center><img src="images/thumbnails/freeciv-client-gtk.png"><br>freeciv-client-gtk</center></td>
+		<td><center><img src="images/thumbnails/wesnoth.png"><br>wesnoth</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/chromium-bsu.png"><br>chromium-bsu</center></td>
+		<td><center><img src="images/thumbnails/scummvm.png"><br>scummvm</center></td>
+		<td><center><img src="images/thumbnails/xboard.png"><br>xboard</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/openttd.png"><br>openttd</center></td>
+		<td><center><img src="images/thumbnails/openarena.png"><br>openarena</center></td>
+		<td><center><img src="images/thumbnails/pingus.png"><br>pingus</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/torcs.png"><br>torcs</center></td>
+		<td><center><img src="images/thumbnails/nethack-console.png"><br>nethack-console</center></td>
+		<td><center><img src="images/thumbnails/neverball.png"><br>neverball</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/armagetronad.png"><br>armagetronad</center></td>
+		<td><center><img src="images/thumbnails/tuxtype.png"><br>tuxtype</center></td>
+		<td><center><img src="images/thumbnails/tuxmath.png"><br>tuxmath</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/cmatrix.png"><br>cmatrix</center></td>
+		<td><center><img src="images/thumbnails/lincity-ng.png"><br>lincity-ng</center></td>
+		<td><center><img src="images/thumbnails/xpenguins.png"><br>xpenguins</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/nexuiz.png"><br>nexuiz</center></td>
+		<td><center><img src="images/thumbnails/hedgewars.png"><br>hedgewars</center></td>
+		<td><center><img src="images/thumbnails/lbreakout2.png"><br>lbreakout2</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/prboom.png"><br>prboom</center></td>
+		<td><center><img src="images/thumbnails/sgt-puzzles.png"><br>sgt-puzzles</center></td>
+		<td><center><img src="images/thumbnails/cgoban.png"><br>cgoban</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xaos.png"><br>xaos</center></td>
+		<td><center><img src="images/thumbnails/warzone2100.png"><br>warzone2100</center></td>
+		<td><center><img src="images/thumbnails/epiphany.png"><br>epiphany</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/bzflag.png"><br>bzflag</center></td>
+		<td><center><img src="images/thumbnails/xfishtank.png"><br>xfishtank</center></td>
+		<td><center><img src="images/thumbnails/ace-of-penguins.png"><br>ace-of-penguins</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/klavaro.png"><br>klavaro</center></td>
+		<td><center><img src="images/thumbnails/pinball.png"><br>pinball</center></td>
+		<td><center><img src="images/thumbnails/freedoom.png"><br>freedoom</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/nethack-x11.png"><br>nethack-x11</center></td>
+		<td><center><img src="images/thumbnails/xmoto.png"><br>xmoto</center></td>
+		<td><center><img src="images/thumbnails/freecol.png"><br>freecol</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/billard-gl.png"><br>billard-gl</center></td>
+		<td><center><img src="images/thumbnails/eboard.png"><br>eboard</center></td>
+		<td><center><img src="images/thumbnails/widelands.png"><br>widelands</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pacman.png"><br>pacman</center></td>
+		<td><center><img src="images/thumbnails/micropolis.png"><br>micropolis</center></td>
+		<td><center><img src="images/thumbnails/foobillard.png"><br>foobillard</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnome-hearts.png"><br>gnome-hearts</center></td>
+		<td><center><img src="images/thumbnails/warmux.png"><br>warmux</center></td>
+		<td><center><img src="images/thumbnails/flightgear.png"><br>flightgear</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/bb.png"><br>bb</center></td>
+		<td><center><img src="images/thumbnails/enigma.png"><br>enigma</center></td>
+		<td><center><img src="images/thumbnails/3dchess.png"><br>3dchess</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/dreamchess.png"><br>dreamchess</center></td>
+		<td><center><img src="images/thumbnails/gtans.png"><br>gtans</center></td>
+		<td><center><img src="images/thumbnails/pokerth.png"><br>pokerth</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/simutrans.png"><br>simutrans</center></td>
+		<td><center><img src="images/thumbnails/neverputt.png"><br>neverputt</center></td>
+		<td><center><img src="images/thumbnails/smc.png"><br>smc</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/wormux.png"><br>wormux</center></td>
+		<td><center><img src="images/thumbnails/xjig.png"><br>xjig</center></td>
+		<td><center><img src="images/thumbnails/beneath-a-steel-sky.png"><br>beneath-a-steel-sky</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/atomix.png"><br>atomix</center></td>
+		<td><center><img src="images/thumbnails/gltron.png"><br>gltron</center></td>
+		<td><center><img src="images/thumbnails/oneko.png"><br>oneko</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/trackballs.png"><br>trackballs</center></td>
+		<td><center><img src="images/thumbnails/teeworlds.png"><br>teeworlds</center></td>
+		<td><center><img src="images/thumbnails/gl-117.png"><br>gl-117</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/sauerbraten.png"><br>sauerbraten</center></td>
+		<td><center><img src="images/thumbnails/circuslinux.png"><br>circuslinux</center></td>
+		<td><center><img src="images/thumbnails/electricsheep.png"><br>electricsheep</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/oolite.png"><br>oolite</center></td>
+		<td><center><img src="images/thumbnails/fretsonfire-game.png"><br>fretsonfire-game</center></td>
+		<td><center><img src="images/thumbnails/alien-arena.png"><br>alien-arena</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/cuyo.png"><br>cuyo</center></td>
+		<td><center><img src="images/thumbnails/ri-li.png"><br>ri-li</center></td>
+		<td><center><img src="images/thumbnails/an.png"><br>an</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/trigger-rally.png"><br>trigger-rally</center></td>
+		<td><center><img src="images/thumbnails/lmemory.png"><br>lmemory</center></td>
+		<td><center><img src="images/thumbnails/brutalchess.png"><br>brutalchess</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/opencity.png"><br>opencity</center></td>
+		<td><center><img src="images/thumbnails/scorched3d.png"><br>scorched3d</center></td>
+		<td><center><img src="images/thumbnails/crack-attack.png"><br>crack-attack</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/filters.png"><br>filters</center></td>
+		<td><center><img src="images/thumbnails/xsok.png"><br>xsok</center></td>
+		<td><center><img src="images/thumbnails/flight-of-the-amazon-queen.png"><br>flight-of-the-amazon-queen</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/freeciv-client-sdl.png"><br>freeciv-client-sdl</center></td>
+		<td><center><img src="images/thumbnails/atanks.png"><br>atanks</center></td>
+		<td><center><img src="images/thumbnails/megaglest.png"><br>megaglest</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/typespeed.png"><br>typespeed</center></td>
+		<td><center><img src="images/thumbnails/hex-a-hop.png"><br>hex-a-hop</center></td>
+		<td><center><img src="images/thumbnails/briquolo.png"><br>briquolo</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/bastet.png"><br>bastet</center></td>
+		<td><center><img src="images/thumbnails/gweled.png"><br>gweled</center></td>
+		<td><center><img src="images/thumbnails/bomberclone.png"><br>bomberclone</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/airstrike.png"><br>airstrike</center></td>
+		<td><center><img src="images/thumbnails/powermanga.png"><br>powermanga</center></td>
+		<td><center><img src="images/thumbnails/boswars.png"><br>boswars</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnome-breakout.png"><br>gnome-breakout</center></td>
+		<td><center><img src="images/thumbnails/blobwars.png"><br>blobwars</center></td>
+		<td><center><img src="images/thumbnails/pysycache.png"><br>pysycache</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xgalaga.png"><br>xgalaga</center></td>
+		<td><center><img src="images/thumbnails/lightspeed.png"><br>lightspeed</center></td>
+		<td><center><img src="images/thumbnails/pysolfc.png"><br>pysolfc</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/funnyboat.png"><br>funnyboat</center></td>
+		<td><center><img src="images/thumbnails/bumprace.png"><br>bumprace</center></td>
+		<td><center><img src="images/thumbnails/lincity.png"><br>lincity</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/moon-buggy.png"><br>moon-buggy</center></td>
+		<td><center><img src="images/thumbnails/pychess.png"><br>pychess</center></td>
+		<td><center><img src="images/thumbnails/btanks.png"><br>btanks</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/7kaa.png"><br>7kaa</center></td>
+		<td><center><img src="images/thumbnails/scid.png"><br>scid</center></td>
+		<td><center><img src="images/thumbnails/pioneers.png"><br>pioneers</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/holotz-castle.png"><br>holotz-castle</center></td>
+		<td><center><img src="images/thumbnails/xpilot-ng-client-x11.png"><br>xpilot-ng-client-x11</center></td>
+		<td><center><img src="images/thumbnails/xabacus.png"><br>xabacus</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/koules.png"><br>koules</center></td>
+		<td><center><img src="images/thumbnails/jumpnbump.png"><br>jumpnbump</center></td>
+		<td><center><img src="images/thumbnails/sudoku.png"><br>sudoku</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/liquidwar.png"><br>liquidwar</center></td>
+		<td><center><img src="images/thumbnails/crawl.png"><br>crawl</center></td>
+		<td><center><img src="images/thumbnails/springlobby.png"><br>springlobby</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/einstein.png"><br>einstein</center></td>
+		<td><center><img src="images/thumbnails/qgo.png"><br>qgo</center></td>
+		<td><center><img src="images/thumbnails/xmahjongg.png"><br>xmahjongg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/planets.png"><br>planets</center></td>
+		<td><center><img src="images/thumbnails/fillets-ng.png"><br>fillets-ng</center></td>
+		<td><center><img src="images/thumbnails/abe.png"><br>abe</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/polygen.png"><br>polygen</center></td>
+		<td><center><img src="images/thumbnails/criticalmass.png"><br>criticalmass</center></td>
+		<td><center><img src="images/thumbnails/gnubg.png"><br>gnubg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/amphetamine.png"><br>amphetamine</center></td>
+		<td><center><img src="images/thumbnails/vodovod.png"><br>vodovod</center></td>
+		<td><center><img src="images/thumbnails/gnome-mastermind.png"><br>gnome-mastermind</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xsoldier.png"><br>xsoldier</center></td>
+		<td><center><img src="images/thumbnails/gtetrinet.png"><br>gtetrinet</center></td>
+		<td><center><img src="images/thumbnails/ltris.png"><br>ltris</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/monsterz.png"><br>monsterz</center></td>
+		<td><center><img src="images/thumbnails/blockout2.png"><br>blockout2</center></td>
+		<td><center><img src="images/thumbnails/alex4.png"><br>alex4</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/alienblaster.png"><br>alienblaster</center></td>
+		<td><center><img src="images/thumbnails/uqm.png"><br>uqm</center></td>
+		<td><center><img src="images/thumbnails/xsol.png"><br>xsol</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/bsdgames-nonfree.png"><br>bsdgames-nonfree</center></td>
+		<td><center><img src="images/thumbnails/blobby.png"><br>blobby</center></td>
+		<td><center><img src="images/thumbnails/dopewars.png"><br>dopewars</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xbill.png"><br>xbill</center></td>
+		<td><center><img src="images/thumbnails/pathological.png"><br>pathological</center></td>
+		<td><center><img src="images/thumbnails/numptyphysics.png"><br>numptyphysics</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xracer.png"><br>xracer</center></td>
+		<td><center><img src="images/thumbnails/wmmatrix.png"><br>wmmatrix</center></td>
+		<td><center><img src="images/thumbnails/bugsquish.png"><br>bugsquish</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/freecraft.png"><br>freecraft</center></td>
+		<td><center><img src="images/thumbnails/madbomber.png"><br>madbomber</center></td>
+		<td><center><img src="images/thumbnails/angband.png"><br>angband</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/trophy.png"><br>trophy</center></td>
+		<td><center><img src="images/thumbnails/xfireworks.png"><br>xfireworks</center></td>
+		<td><center><img src="images/thumbnails/kobodeluxe.png"><br>kobodeluxe</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/open-invaders.png"><br>open-invaders</center></td>
+		<td><center><img src="images/thumbnails/singularity.png"><br>singularity</center></td>
+		<td><center><img src="images/thumbnails/gtkboard.png"><br>gtkboard</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xteddy.png"><br>xteddy</center></td>
+		<td><center><img src="images/thumbnails/freedink-dfarc.png"><br>freedink-dfarc</center></td>
+		<td><center><img src="images/thumbnails/pi.png"><br>pi</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gamine.png"><br>gamine</center></td>
+		<td><center><img src="images/thumbnails/torus-trooper.png"><br>torus-trooper</center></td>
+		<td><center><img src="images/thumbnails/abuse.png"><br>abuse</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/glob2.png"><br>glob2</center></td>
+		<td><center><img src="images/thumbnails/frotz.png"><br>frotz</center></td>
+		<td><center><img src="images/thumbnails/netris.png"><br>netris</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/crawl-tiles.png"><br>crawl-tiles</center></td>
+		<td><center><img src="images/thumbnails/xblast-tnt.png"><br>xblast-tnt</center></td>
+		<td><center><img src="images/thumbnails/lletters.png"><br>lletters</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/a7xpg.png"><br>a7xpg</center></td>
+		<td><center><img src="images/thumbnails/icebreaker.png"><br>icebreaker</center></td>
+		<td><center><img src="images/thumbnails/lightyears.png"><br>lightyears</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/phalanx.png"><br>phalanx</center></td>
+		<td><center><img src="images/thumbnails/ceferino.png"><br>ceferino</center></td>
+		<td><center><img src="images/thumbnails/gnubik.png"><br>gnubik</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/solarwolf.png"><br>solarwolf</center></td>
+		<td><center><img src="images/thumbnails/xbomb.png"><br>xbomb</center></td>
+		<td><center><img src="images/thumbnails/berusky.png"><br>berusky</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/asc.png"><br>asc</center></td>
+		<td><center><img src="images/thumbnails/xskat.png"><br>xskat</center></td>
+		<td><center><img src="images/thumbnails/freedroidrpg.png"><br>freedroidrpg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/atris.png"><br>atris</center></td>
+		<td><center><img src="images/thumbnails/sjeng.png"><br>sjeng</center></td>
+		<td><center><img src="images/thumbnails/xcowsay.png"><br>xcowsay</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/rocksndiamonds.png"><br>rocksndiamonds</center></td>
+		<td><center><img src="images/thumbnails/tremulous.png"><br>tremulous</center></td>
+		<td><center><img src="images/thumbnails/glest.png"><br>glest</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/starplot.png"><br>starplot</center></td>
+		<td><center><img src="images/thumbnails/antigravitaattori.png"><br>antigravitaattori</center></td>
+		<td><center><img src="images/thumbnails/balazar3-3d.png"><br>balazar3-3d</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/mah-jong.png"><br>mah-jong</center></td>
+		<td><center><img src="images/thumbnails/tuxpuck.png"><br>tuxpuck</center></td>
+		<td><center><img src="images/thumbnails/bloboats.png"><br>bloboats</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/heroes-sdl.png"><br>heroes-sdl</center></td>
+		<td><center><img src="images/thumbnails/gplanarity.png"><br>gplanarity</center></td>
+		<td><center><img src="images/thumbnails/moon-lander.png"><br>moon-lander</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/barrage.png"><br>barrage</center></td>
+		<td><center><img src="images/thumbnails/kraptor.png"><br>kraptor</center></td>
+		<td><center><img src="images/thumbnails/adonthell.png"><br>adonthell</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/freedroid.png"><br>freedroid</center></td>
+		<td><center><img src="images/thumbnails/animals.png"><br>animals</center></td>
+		<td><center><img src="images/thumbnails/defendguin.png"><br>defendguin</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/flobopuyo.png"><br>flobopuyo</center></td>
+		<td><center><img src="images/thumbnails/searchandrescue.png"><br>searchandrescue</center></td>
+		<td><center><img src="images/thumbnails/angrydd.png"><br>angrydd</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/grhino.png"><br>grhino</center></td>
+		<td><center><img src="images/thumbnails/burgerspace.png"><br>burgerspace</center></td>
+		<td><center><img src="images/thumbnails/acm.png"><br>acm</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/cultivation.png"><br>cultivation</center></td>
+		<td><center><img src="images/thumbnails/zivot.png"><br>zivot</center></td>
+		<td><center><img src="images/thumbnails/empire.png"><br>empire</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pipenightdreams.png"><br>pipenightdreams</center></td>
+		<td><center><img src="images/thumbnails/tint.png"><br>tint</center></td>
+		<td><center><img src="images/thumbnails/bouncy.png"><br>bouncy</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xfractint.png"><br>xfractint</center></td>
+		<td><center><img src="images/thumbnails/aa3d.png"><br>aa3d</center></td>
+		<td><center><img src="images/thumbnails/stormbaancoureur.png"><br>stormbaancoureur</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xmountains.png"><br>xmountains</center></td>
+		<td><center><img src="images/thumbnails/jigzo.png"><br>jigzo</center></td>
+		<td><center><img src="images/thumbnails/mirrormagic.png"><br>mirrormagic</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gmchess.png"><br>gmchess</center></td>
+		<td><center><img src="images/thumbnails/wordplay.png"><br>wordplay</center></td>
+		<td><center><img src="images/thumbnails/pong2.png"><br>pong2</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gunroar.png"><br>gunroar</center></td>
+		<td><center><img src="images/thumbnails/ballz.png"><br>ballz</center></td>
+		<td><center><img src="images/thumbnails/petris.png"><br>petris</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pacman4console.png"><br>pacman4console</center></td>
+		<td><center><img src="images/thumbnails/penguin-command.png"><br>penguin-command</center></td>
+		<td><center><img src="images/thumbnails/hannah.png"><br>hannah</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnujump.png"><br>gnujump</center></td>
+		<td><center><img src="images/thumbnails/xqf.png"><br>xqf</center></td>
+		<td><center><img src="images/thumbnails/quarry.png"><br>quarry</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tecnoballz.png"><br>tecnoballz</center></td>
+		<td><center><img src="images/thumbnails/warsow.png"><br>warsow</center></td>
+		<td><center><img src="images/thumbnails/xscorch.png"><br>xscorch</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/wing.png"><br>wing</center></td>
+		<td><center><img src="images/thumbnails/balazar.png"><br>balazar</center></td>
+		<td><center><img src="images/thumbnails/adanaxisgpl.png"><br>adanaxisgpl</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xscavenger.png"><br>xscavenger</center></td>
+		<td><center><img src="images/thumbnails/xbubble.png"><br>xbubble</center></td>
+		<td><center><img src="images/thumbnails/slashem.png"><br>slashem</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gearhead.png"><br>gearhead</center></td>
+		<td><center><img src="images/thumbnails/tdfsb.png"><br>tdfsb</center></td>
+		<td><center><img src="images/thumbnails/tmw.png"><br>tmw</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/mazeofgalious.png"><br>mazeofgalious</center></td>
+		<td><center><img src="images/thumbnails/crimson.png"><br>crimson</center></td>
+		<td><center><img src="images/thumbnails/egoboo.png"><br>egoboo</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pipewalker.png"><br>pipewalker</center></td>
+		<td><center><img src="images/thumbnails/toppler.png"><br>toppler</center></td>
+		<td><center><img src="images/thumbnails/raincat.png"><br>raincat</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/cappuccino.png"><br>cappuccino</center></td>
+		<td><center><img src="images/thumbnails/snowballz.png"><br>snowballz</center></td>
+		<td><center><img src="images/thumbnails/gravitywars.png"><br>gravitywars</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/netpanzer.png"><br>netpanzer</center></td>
+		<td><center><img src="images/thumbnails/purity.png"><br>purity</center></td>
+		<td><center><img src="images/thumbnails/geekcode.png"><br>geekcode</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xpat2.png"><br>xpat2</center></td>
+		<td><center><img src="images/thumbnails/xboing.png"><br>xboing</center></td>
+		<td><center><img src="images/thumbnails/freetennis.png"><br>freetennis</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/uligo.png"><br>uligo</center></td>
+		<td><center><img src="images/thumbnails/starvoyager.png"><br>starvoyager</center></td>
+		<td><center><img src="images/thumbnails/etw.png"><br>etw</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/freeciv-client-xaw3d.png"><br>freeciv-client-xaw3d</center></td>
+		<td><center><img src="images/thumbnails/teg.png"><br>teg</center></td>
+		<td><center><img src="images/thumbnails/njam.png"><br>njam</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/bombardier.png"><br>bombardier</center></td>
+		<td><center><img src="images/thumbnails/attal.png"><br>attal</center></td>
+		<td><center><img src="images/thumbnails/knights.png"><br>knights</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/balazar3.png"><br>balazar3</center></td>
+		<td><center><img src="images/thumbnails/ninvaders.png"><br>ninvaders</center></td>
+		<td><center><img src="images/thumbnails/colorcode.png"><br>colorcode</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/kcheckers.png"><br>kcheckers</center></td>
+		<td><center><img src="images/thumbnails/slingshot.png"><br>slingshot</center></td>
+		<td><center><img src="images/thumbnails/bygfoot.png"><br>bygfoot</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/nettoe.png"><br>nettoe</center></td>
+		<td><center><img src="images/thumbnails/viruskiller.png"><br>viruskiller</center></td>
+		<td><center><img src="images/thumbnails/balazarbrothers.png"><br>balazarbrothers</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/lordsawar.png"><br>lordsawar</center></td>
+		<td><center><img src="images/thumbnails/sludge-engine.png"><br>sludge-engine</center></td>
+		<td><center><img src="images/thumbnails/geki3.png"><br>geki3</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/rolldice.png"><br>rolldice</center></td>
+		<td><center><img src="images/thumbnails/blockattack.png"><br>blockattack</center></td>
+		<td><center><img src="images/thumbnails/pathogen.png"><br>pathogen</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xwelltris.png"><br>xwelltris</center></td>
+		<td><center><img src="images/thumbnails/castle-combat.png"><br>castle-combat</center></td>
+		<td><center><img src="images/thumbnails/tipptrainer.png"><br>tipptrainer</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/luola.png"><br>luola</center></td>
+		<td><center><img src="images/thumbnails/snake4.png"><br>snake4</center></td>
+		<td><center><img src="images/thumbnails/rrootage.png"><br>rrootage</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pixfrogger.png"><br>pixfrogger</center></td>
+		<td><center><img src="images/thumbnails/gnushogi.png"><br>gnushogi</center></td>
+		<td><center><img src="images/thumbnails/xinv3d.png"><br>xinv3d</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tumiki-fighters.png"><br>tumiki-fighters</center></td>
+		<td><center><img src="images/thumbnails/ardentryst.png"><br>ardentryst</center></td>
+		<td><center><img src="images/thumbnails/sopwith.png"><br>sopwith</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/asciijump.png"><br>asciijump</center></td>
+		<td><center><img src="images/thumbnails/gtkpool.png"><br>gtkpool</center></td>
+		<td><center><img src="images/thumbnails/ketm.png"><br>ketm</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tomatoes.png"><br>tomatoes</center></td>
+		<td><center><img src="images/thumbnails/achilles.png"><br>achilles</center></td>
+		<td><center><img src="images/thumbnails/gnome-mud.png"><br>gnome-mud</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xfrisk.png"><br>xfrisk</center></td>
+		<td><center><img src="images/thumbnails/vectoroids.png"><br>vectoroids</center></td>
+		<td><center><img src="images/thumbnails/space-orbit.png"><br>space-orbit</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/realtimebattle.png"><br>realtimebattle</center></td>
+		<td><center><img src="images/thumbnails/black-box.png"><br>black-box</center></td>
+		<td><center><img src="images/thumbnails/ghextris.png"><br>ghextris</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/dvorak7min.png"><br>dvorak7min</center></td>
+		<td><center><img src="images/thumbnails/dadadodo.png"><br>dadadodo</center></td>
+		<td><center><img src="images/thumbnails/xevil.png"><br>xevil</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xdemineur.png"><br>xdemineur</center></td>
+		<td><center><img src="images/thumbnails/tome.png"><br>tome</center></td>
+		<td><center><img src="images/thumbnails/enemylines7.png"><br>enemylines7</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gtkatlantic.png"><br>gtkatlantic</center></td>
+		<td><center><img src="images/thumbnails/csmash.png"><br>csmash</center></td>
+		<td><center><img src="images/thumbnails/xletters.png"><br>xletters</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/chocolate-doom.png"><br>chocolate-doom</center></td>
+		<td><center><img src="images/thumbnails/kball.png"><br>kball</center></td>
+		<td><center><img src="images/thumbnails/geki2.png"><br>geki2</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/transcend.png"><br>transcend</center></td>
+		<td><center><img src="images/thumbnails/gnurobots.png"><br>gnurobots</center></td>
+		<td><center><img src="images/thumbnails/pyracerz.png"><br>pyracerz</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/phlipple.png"><br>phlipple</center></td>
+		<td><center><img src="images/thumbnails/xgammon.png"><br>xgammon</center></td>
+		<td><center><img src="images/thumbnails/gsoko.png"><br>gsoko</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xphoon.png"><br>xphoon</center></td>
+		<td><center><img src="images/thumbnails/rafkill.png"><br>rafkill</center></td>
+		<td><center><img src="images/thumbnails/whichwayisup.png"><br>whichwayisup</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xjump.png"><br>xjump</center></td>
+		<td><center><img src="images/thumbnails/rott.png"><br>rott</center></td>
+		<td><center><img src="images/thumbnails/titanion.png"><br>titanion</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xtron.png"><br>xtron</center></td>
+		<td><center><img src="images/thumbnails/plee-the-bear.png"><br>plee-the-bear</center></td>
+		<td><center><img src="images/thumbnails/kiki-the-nano-bot.png"><br>kiki-the-nano-bot</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/robotfindskitten.png"><br>robotfindskitten</center></td>
+		<td><center><img src="images/thumbnails/slashem-gtk.png"><br>slashem-gtk</center></td>
+		<td><center><img src="images/thumbnails/lmarbles.png"><br>lmarbles</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gearhead2.png"><br>gearhead2</center></td>
+		<td><center><img src="images/thumbnails/tuxeyes.png"><br>tuxeyes</center></td>
+		<td><center><img src="images/thumbnails/pachi.png"><br>pachi</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/amoeba.png"><br>amoeba</center></td>
+		<td><center><img src="images/thumbnails/gtkballs.png"><br>gtkballs</center></td>
+		<td><center><img src="images/thumbnails/shisen.app.png"><br>shisen.app</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xdesktopwaves.png"><br>xdesktopwaves</center></td>
+		<td><center><img src="images/thumbnails/nlkt.png"><br>nlkt</center></td>
+		<td><center><img src="images/thumbnails/val-and-rick.png"><br>val-and-rick</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/trigger.png"><br>trigger</center></td>
+		<td><center><img src="images/thumbnails/omega-rpg.png"><br>omega-rpg</center></td>
+		<td><center><img src="images/thumbnails/mu-cade.png"><br>mu-cade</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/battleball.png"><br>battleball</center></td>
+		<td><center><img src="images/thumbnails/xshisen.png"><br>xshisen</center></td>
+		<td><center><img src="images/thumbnails/overgod.png"><br>overgod</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnudoq.png"><br>gnudoq</center></td>
+		<td><center><img src="images/thumbnails/glunarclock.png"><br>glunarclock</center></td>
+		<td><center><img src="images/thumbnails/triplea.png"><br>triplea</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/parsec47.png"><br>parsec47</center></td>
+		<td><center><img src="images/thumbnails/gav.png"><br>gav</center></td>
+		<td><center><img src="images/thumbnails/glpeces.png"><br>glpeces</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/orbital-eunuchs-sniper.png"><br>orbital-eunuchs-sniper</center></td>
+		<td><center><img src="images/thumbnails/qonk.png"><br>qonk</center></td>
+		<td><center><img src="images/thumbnails/blast.png"><br>blast</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/fltk1.1-games.png"><br>fltk1.1-games</center></td>
+		<td><center><img src="images/thumbnails/tennix.png"><br>tennix</center></td>
+		<td><center><img src="images/thumbnails/meritous.png"><br>meritous</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xtux-client.png"><br>xtux-client</center></td>
+		<td><center><img src="images/thumbnails/supertransball2.png"><br>supertransball2</center></td>
+		<td><center><img src="images/thumbnails/gnurobbo.png"><br>gnurobbo</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xshogi.png"><br>xshogi</center></td>
+		<td><center><img src="images/thumbnails/xmille.png"><br>xmille</center></td>
+		<td><center><img src="images/thumbnails/freesweep.png"><br>freesweep</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/amoebax.png"><br>amoebax</center></td>
+		<td><center><img src="images/thumbnails/xonix.png"><br>xonix</center></td>
+		<td><center><img src="images/thumbnails/dodgindiamond2.png"><br>dodgindiamond2</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/enemylines3.png"><br>enemylines3</center></td>
+		<td><center><img src="images/thumbnails/biloba.png"><br>biloba</center></td>
+		<td><center><img src="images/thumbnails/blocks-of-the-undead.png"><br>blocks-of-the-undead</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gnomekiss.png"><br>gnomekiss</center></td>
+		<td><center><img src="images/thumbnails/zangband.png"><br>zangband</center></td>
+		<td><center><img src="images/thumbnails/groundhog.png"><br>groundhog</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/lgeneral.png"><br>lgeneral</center></td>
+		<td><center><img src="images/thumbnails/gemdropx.png"><br>gemdropx</center></td>
+		<td><center><img src="images/thumbnails/stepbill.app.png"><br>stepbill.app</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/primrose.png"><br>primrose</center></td>
+		<td><center><img src="images/thumbnails/pangzero.png"><br>pangzero</center></td>
+		<td><center><img src="images/thumbnails/moria.png"><br>moria</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/londonlaw.png"><br>londonlaw</center></td>
+		<td><center><img src="images/thumbnails/hexxagon.png"><br>hexxagon</center></td>
+		<td><center><img src="images/thumbnails/magicor.png"><br>magicor</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/lavaps.png"><br>lavaps</center></td>
+		<td><center><img src="images/thumbnails/slimevolley.png"><br>slimevolley</center></td>
+		<td><center><img src="images/thumbnails/dossizola.png"><br>dossizola</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xball.png"><br>xball</center></td>
+		<td><center><img src="images/thumbnails/garden-of-coloured-lights.png"><br>garden-of-coloured-lights</center></td>
+		<td><center><img src="images/thumbnails/openyahtzee.png"><br>openyahtzee</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tworld.png"><br>tworld</center></td>
+		<td><center><img src="images/thumbnails/balazar3-2d.png"><br>balazar3-2d</center></td>
+		<td><center><img src="images/thumbnails/shermans-aquarium.png"><br>shermans-aquarium</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/slashem-sdl.png"><br>slashem-sdl</center></td>
+		<td><center><img src="images/thumbnails/hitori.png"><br>hitori</center></td>
+		<td><center><img src="images/thumbnails/xasteroids.png"><br>xasteroids</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/mancala.png"><br>mancala</center></td>
+		<td><center><img src="images/thumbnails/gridlock.app.png"><br>gridlock.app</center></td>
+		<td><center><img src="images/thumbnails/glotski.png"><br>glotski</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/spacearyarya.png"><br>spacearyarya</center></td>
+		<td><center><img src="images/thumbnails/heroes-ggi.png"><br>heroes-ggi</center></td>
+		<td><center><img src="images/thumbnails/pente.png"><br>pente</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/magicmaze.png"><br>magicmaze</center></td>
+		<td><center><img src="images/thumbnails/hexalate.png"><br>hexalate</center></td>
+		<td><center><img src="images/thumbnails/netmaze.png"><br>netmaze</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xvier.png"><br>xvier</center></td>
+		<td><center><img src="images/thumbnails/xoids.png"><br>xoids</center></td>
+		<td><center><img src="images/thumbnails/gbatnav.png"><br>gbatnav</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/late.png"><br>late</center></td>
+		<td><center><img src="images/thumbnails/greed.png"><br>greed</center></td>
+		<td><center><img src="images/thumbnails/stax.png"><br>stax</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/slashem-x11.png"><br>slashem-x11</center></td>
+		<td><center><img src="images/thumbnails/tetzle.png"><br>tetzle</center></td>
+		<td><center><img src="images/thumbnails/filler.png"><br>filler</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tagua.png"><br>tagua</center></td>
+		<td><center><img src="images/thumbnails/sdate.png"><br>sdate</center></td>
+		<td><center><img src="images/thumbnails/xbattle.png"><br>xbattle</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gamazons.png"><br>gamazons</center></td>
+		<td><center><img src="images/thumbnails/atom4.png"><br>atom4</center></td>
+		<td><center><img src="images/thumbnails/powder.png"><br>powder</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xgalaga++.png"><br>xgalaga++</center></td>
+		<td><center><img src="images/thumbnails/rotix.png"><br>rotix</center></td>
+		<td><center><img src="images/thumbnails/tetrinet-client.png"><br>tetrinet-client</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/vor.png"><br>vor</center></td>
+		<td><center><img src="images/thumbnails/noiz2sa.png"><br>noiz2sa</center></td>
+		<td><center><img src="images/thumbnails/torus-trooper-pure.png"><br>torus-trooper-pure</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/allegro-demo.png"><br>allegro-demo</center></td>
+		<td><center><img src="images/thumbnails/xye.png"><br>xye</center></td>
+		<td><center><img src="images/thumbnails/nethack-qt.png"><br>nethack-qt</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/verse.png"><br>verse</center></td>
+		<td><center><img src="images/thumbnails/kali.png"><br>kali</center></td>
+		<td><center><img src="images/thumbnails/spider.png"><br>spider</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tenmado.png"><br>tenmado</center></td>
+		<td><center><img src="images/thumbnails/armagetronad-dedicated.png"><br>armagetronad-dedicated</center></td>
+		<td><center><img src="images/thumbnails/4digits.png"><br>4digits</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gfpoken.png"><br>gfpoken</center></td>
+		<td><center><img src="images/thumbnails/jester.png"><br>jester</center></td>
+		<td><center><img src="images/thumbnails/spout.png"><br>spout</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/cwcp.png"><br>cwcp</center></td>
+		<td><center><img src="images/thumbnails/wesnoth-editor.png"><br>wesnoth-editor</center></td>
+		<td><center><img src="images/thumbnails/xpuzzles.png"><br>xpuzzles</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gniall.png"><br>gniall</center></td>
+		<td><center><img src="images/thumbnails/monster-masher.png"><br>monster-masher</center></td>
+		<td><center><img src="images/thumbnails/armagetron.png"><br>armagetron</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/rockdodger.png"><br>rockdodger</center></td>
+		<td><center><img src="images/thumbnails/komi.png"><br>komi</center></td>
+		<td><center><img src="images/thumbnails/pybik.png"><br>pybik</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gameclock.png"><br>gameclock</center></td>
+		<td><center><img src="images/thumbnails/kildclient.png"><br>kildclient</center></td>
+		<td><center><img src="images/thumbnails/excellent-bifurcation.png"><br>excellent-bifurcation</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/zatacka.png"><br>zatacka</center></td>
+		<td><center><img src="images/thumbnails/pydance.png"><br>pydance</center></td>
+		<td><center><img src="images/thumbnails/randtype.png"><br>randtype</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/qxw.png"><br>qxw</center></td>
+		<td><center><img src="images/thumbnails/mudlet.png"><br>mudlet</center></td>
+		<td><center><img src="images/thumbnails/xflip.png"><br>xflip</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/funguloids.png"><br>funguloids</center></td>
+		<td><center><img src="images/thumbnails/triplane.png"><br>triplane</center></td>
+		<td><center><img src="images/thumbnails/matanza.png"><br>matanza</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/exult.png"><br>exult</center></td>
+		<td><center><img src="images/thumbnails/gmult.png"><br>gmult</center></td>
+		<td><center><img src="images/thumbnails/overkill.png"><br>overkill</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pybridge.png"><br>pybridge</center></td>
+		<td><center><img src="images/thumbnails/xchain.png"><br>xchain</center></td>
+		<td><center><img src="images/thumbnails/xmabacus.png"><br>xmabacus</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/tictactoe-ng.png"><br>tictactoe-ng</center></td>
+		<td><center><img src="images/thumbnails/vigor.png"><br>vigor</center></td>
+		<td><center><img src="images/thumbnails/nighthawk.png"><br>nighthawk</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xsabre.png"><br>xsabre</center></td>
+		<td><center><img src="images/thumbnails/floatbg.png"><br>floatbg</center></td>
+		<td><center><img src="images/thumbnails/pynagram.png"><br>pynagram</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/openpref.png"><br>openpref</center></td>
+		<td><center><img src="images/thumbnails/xmpuzzles.png"><br>xmpuzzles</center></td>
+		<td><center><img src="images/thumbnails/gpe-go.png"><br>gpe-go</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gpe-tetris.png"><br>gpe-tetris</center></td>
+		<td><center><img src="images/thumbnails/spacezero.png"><br>spacezero</center></td>
+		<td><center><img src="images/thumbnails/boson.png"><br>boson</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/freevial.png"><br>freevial</center></td>
+		<td><center><img src="images/thumbnails/peg-e.png"><br>peg-e</center></td>
+		<td><center><img src="images/thumbnails/gpe-othello.png"><br>gpe-othello</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/xpenguins-applet.png"><br>xpenguins-applet</center></td>
+		<td><center><img src="images/thumbnails/tourney-manager.png"><br>tourney-manager</center></td>
+		<td><center><img src="images/thumbnails/xtris.png"><br>xtris</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/holdingnuts.png"><br>holdingnuts</center></td>
+		<td><center><img src="images/thumbnails/moon-buggy-esd.png"><br>moon-buggy-esd</center></td>
+		<td><center><img src="images/thumbnails/mgt.png"><br>mgt</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/mmpong-gl.png"><br>mmpong-gl</center></td>
+		<td><center><img src="images/thumbnails/wizznic.png"><br>wizznic</center></td>
+		<td><center><img src="images/thumbnails/mines.app.png"><br>mines.app</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/holotz-castle-editor.png"><br>holotz-castle-editor</center></td>
+		<td><center><img src="images/thumbnails/xbl.png"><br>xbl</center></td>
+		<td><center><img src="images/thumbnails/cavezofphear.png"><br>cavezofphear</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/stroq.png"><br>stroq</center></td>
+		<td><center><img src="images/thumbnails/peg-solitaire.png"><br>peg-solitaire</center></td>
+		<td><center><img src="images/thumbnails/conquest-gl.png"><br>conquest-gl</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/crossfire-client-gtk2.png"><br>crossfire-client-gtk2</center></td>
+		<td><center><img src="images/thumbnails/welcome2l.png"><br>welcome2l</center></td>
+		<td><center><img src="images/thumbnails/dealer.png"><br>dealer</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gpe-lights.png"><br>gpe-lights</center></td>
+		<td><center><img src="images/thumbnails/zblast-x11.png"><br>zblast-x11</center></td>
+		<td><center><img src="images/thumbnails/tictactoe.png"><br>tictactoe</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/deal.png"><br>deal</center></td>
+		<td><center><img src="images/thumbnails/bugsx.png"><br>bugsx</center></td>
+		<td><center><img src="images/thumbnails/mmpong-caca.png"><br>mmpong-caca</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/exult-studio.png"><br>exult-studio</center></td>
+		<td><center><img src="images/thumbnails/dds.png"><br>dds</center></td>
+		<td><center><img src="images/thumbnails/tenace.png"><br>tenace</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pouetchess.png"><br>pouetchess</center></td>
+		<td><center><img src="images/thumbnails/sabre.png"><br>sabre</center></td>
+		<td><center><img src="images/thumbnails/salliere.png"><br>salliere</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/gsalliere.png"><br>gsalliere</center></td>
+		<td><center><img src="images/thumbnails/cutechess.png"><br>cutechess</center></td>
+		<td><center><img src="images/thumbnails/wesnoth-server.png"><br>wesnoth-server</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/sludge-devkit.png"><br>sludge-devkit</center></td>
+		<td><center><img src="images/thumbnails/crossfire-client-gtk.png"><br>crossfire-client-gtk</center></td>
+		<td><center><img src="images/thumbnails/openrpg.png"><br>openrpg</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/pescetti.png"><br>pescetti</center></td>
+		<td><center><img src="images/thumbnails/lsnipes.png"><br>lsnipes</center></td>
+		<td><center><img src="images/thumbnails/xeji.png"><br>xeji</center></td>
+	      </tr>
+	      <tr>
+		<td><center><img src="images/thumbnails/wmblob.png"><br>wmblob</center></td>
+		<td><center><img src="images/thumbnails/armagetron-server.png"><br>armagetron-server</center></td>
+		<td></td>
+	      </tr>
+
+            </tbody>
+	  </table>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+[% USE Dumper(Indent=1) -%]
+
+[% USE SWIPLI -%]
+
+[%- hash = SWIPLI.GetHash(SWIPLI.GetList(results).0) -%]
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Preloaded Data
+        <small></small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="bs-example">
+	<div class="table-responsive"> 
+	  <table class="table table-bordered">
+            <thead>
+	      <tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th></th>
+		<th></th>
+		<th>Price</th>
+	      </tr>
+            </thead>
+            <tbody>
+	    [%- FOREACH item IN SWIPLI.GetList(hash.datasets) %]
+	      [% entry = SWIPLI.GetHash(item) %]
+	      <tr>
+		<td><a href="[%- entry.url -%]">[%- entry.name -%]</a></td>
+		<td>[%- entry.description -%]</td>
+		<td>[%- entry.a -%]</td>
+		<td>[%- entry.b -%]</td>
+		<td>[%- entry.price -%]</td>
+	      </tr>
+	    [%- END -%]
+            </tbody>
+	  </table>
+	</div>
+      </div>
+    </div>
+  </div>
+</div> 

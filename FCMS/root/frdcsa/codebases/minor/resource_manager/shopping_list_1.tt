@@ -1,0 +1,36 @@
+[% USE SWIPLI -%]
+
+[%- hash = SWIPLI.GetHash(SWIPLI.GetList(shopping_list_1).0) -%]
+
+[%- FOREACH result IN SWIPLI.GetList(hash.desiredAcquisitions) %]
+[% tmp = result.shift %]
+[% agent = result.shift %]
+[% items = result.shift %]
+<ul>
+<li>
+[% agentResult = c.model('FRDCSA').Convert('Input', [agent], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+[% matches = agentResult.match('(.+?)\.?\n?$') %]
+<a href="[%- c.uri_for(matches.0) %]">[%- matches.0 -%]</a> &nbsp;
+</li>
+[%- FOREACH result IN SWIPLI.GetList(items) %]
+<li>
+<!-- drag handle -->
+<span class="handle">
+<i class="fa fa-ellipsis-v"></i>
+<i class="fa fa-ellipsis-v"></i>
+</span>
+<!-- checkbox -->
+<input type="checkbox" value="" name="">
+<!-- todo text -->
+<span class="text">
+<b>
+[% shoppingListResult = c.model('FRDCSA').Convert('Input', [result], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+[% matches = shoppingListResult.match('(.+?)\.?\n?$') %]
+<a href="[%- c.uri_for('shopping_list',matches.0) %]">[%- matches.0 -%]</a> &nbsp;
+<br>
+</b>
+</span>
+</li>
+[%- END %]
+</ul>
+[%- END %]

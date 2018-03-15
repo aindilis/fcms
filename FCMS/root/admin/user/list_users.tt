@@ -1,0 +1,33 @@
+[%- meta.title   = 'Users';
+-%]
+<table class="list">
+	<tr>
+		<th>
+			Username
+		</th>
+		<th>
+			Email
+		</th>
+		<th>
+			Actions
+		</th>
+	</tr>
+	[%- FOREACH user IN users %]
+	<tr onmouseover="style.backgroundColor='#eeffdd';" onmouseout="style.backgroundColor='transparent'">
+		<td>
+			[% user.username | html %]
+		</td>
+		<td>
+			[% user.email | html %]
+		</td>
+		<td>
+			<a href="[% c.uri_for( '/user', user.username             ) %]">View</a> / 
+			<a href="[% c.uri_for( 'user', user.id, 'edit'            ) %]">Edit</a> / 
+			<a href="[% c.uri_for( 'user', user.id, 'track-logins'    ) %]">Logins</a> / 
+			<a href="[% c.uri_for( 'user', user.id, 'track-files'     ) %]">Downloads</a> / 
+			<a href="[% c.uri_for( 'user', user.id, 'change-password' ) %]">Change password</a>
+		</td>
+	</tr>
+	[%- END %]
+</table>
+

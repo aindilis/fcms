@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"file:///usr/share/sgml/docbook/dtd/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<book>
+  <title>
+    FRDCSA Tutorial
+  </title>
+  <bookinfo>
+    <author>
+      <firstname>Andrew</firstname>
+      <surname>Dougherty</surname>
+    </author>
+  </bookinfo>
+  <toc>
+  </toc>
+  <chapter>
+    <title>
+      Artificial Intelligence
+    </title>
+    <sect1>
+      <title>
+	Overview
+      </title>
+      <para>
+	The  FRDCSA project  is concerned  with implementing  a public
+	domain AI out of existing available free software.
+      </para>
+      <para>
+	We define AI to be  "the evasion of chance in survival".  This
+	is  achieved  by  being   able  to  solve  relatively  greater
+	classes of problems.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	Call for Assistance
+      </title>
+      <para>
+	The first  thing we suggest is understanding  the relevance of
+	this project to your daily life.
+      </para>
+      <para>
+	By  contributing to  this project  you  will be  able to  help
+	eliminate  systematic  ignorance  that  results from  lack  of
+	problem solving  capabilities.  Our goal  is to reach  as many
+	people as  possible, and gain a reputation  as an organization
+	which  promotes  an objective  problem  solving approach  that
+	helps people solve the  conflicts of interest that result from
+	the  inability  to  solve  certain  problems  due  to  bounded
+	rationality.  Then,  people will  become more accepting  as we
+	assist them in  resolving outstanding problems that negatively
+	affect their welfare and quality of life.
+      </para>
+    </sect1>
+  </chapter>
+  <chapter>
+    <title>
+      Universal Strategy      
+    </title>
+    <sect1>
+      <title>
+	Commandments
+      </title>
+      <para>
+	Starting from  this point on,  you will become educated  as to
+	our general  methods for  resolving problems.  In  the future,
+	more  robust, intelligent  interfaces will  be  finished which
+	will be  far more useful  than this simple  documentation, but
+	for the purposes of having a starting point this documentation
+	exists.
+      </para>
+      <para>
+	1: Read this entire manual.
+      </para>
+      <para>
+	In order to succeed with this system you must read this entire
+	manual.
+      </para>
+      <para>
+	Consider that when a person reads a manual, there are at least
+	two  kind  of  concepts   that  they  learn.   Let  us  define
+	"justified" concepts  as those  which the user  has sufficient
+	knowledge to  correctly accept or  reject.  Conversely, define
+	"unjustified" concepts  to be those  which the user  lacks the
+	ability to correctly accept or reject.
+      </para>
+      <para>
+	The concepts here are  often of the "unjustified" sort.  There
+	are  various  common psychological  reactions  to learning  of
+	unjustified  concepts, some of  which result  in understanding
+	and some of which don't.
+      </para>
+      <para>
+	The  best  strategy  is   to  treat  unjustified  concepts  as
+	assertions whose  meaning is not  know currently, and  then to
+	bind meaning to them as  one sees co-occurances of them in the
+	text.  Then,  when their  meaning becomes completely  clear, a
+	person can then decide whether  they are incorrect.
+      </para>
+      <para>
+	Unjustified are  usually the  most novel and  informative, and
+	therefore  it is  in  the readers  interest  to study  further
+	despite being unsure  of the meaning of the  concepts, so that
+	eventually, all  unjustified concepts have  been so thoroughly
+	explained that they have  become justified concepts, which the
+	user  can  then make  an  informed  decision.   But until  all
+	reading has  finished, the user lacks the  correct language to
+	understand the concepts.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	Starting Points
+      </title>
+      <para>
+	Learn GNUCash
+      </para>
+    </sect1>
+  </chapter>
+</book>
+

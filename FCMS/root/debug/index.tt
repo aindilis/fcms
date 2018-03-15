@@ -1,0 +1,11 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Debug';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+<pre>[% Dumper.dump(c.user.username) %]</pre><br>
+
+<pre>[% Dumper.dump(c) %]</pre><br>
+
+

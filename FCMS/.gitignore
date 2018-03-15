@@ -1,0 +1,9 @@
+*~
+Makefile
+META.yml
+blib
+inc
+/MANIFEST
+/MYMETA.*
+/ShinyCMS-*
+/pm_to_blib

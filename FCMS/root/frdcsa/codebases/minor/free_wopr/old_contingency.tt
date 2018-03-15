@@ -1,0 +1,51 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[%- USE Dumper %]
+<!-- Main row -->
+<div class="row">
+<!-- Left col -->
+<section class="col-lg-6 connectedSortable">
+<!-- TO DO List -->
+<div class="box box-primary">
+
+<div class="box-body">
+<h2>[%- c.stash.contingency_name %]</h2>
+
+<button type="button" class="btn btn-default pull-right">
+<i class="fa fa-plus"></i> <a href="[% c.uri_for('contigency',c.stash.contigency_name,'activate') %]">Mark Contigency Active</a>
+</button>
+<br>
+
+<h3><a href="[%- c.uri_for('branches') %]">Branches</a></h3>
+
+<ul>
+<li>
+<h4>Branch 1</h4>
+<ul>
+<li><h4>NL</h4></li>
+<li><h4>CycL</h4></li>
+<li><h4><a href="[%- c.uri_for('execution-criteria') %]">Execution Criteria</a></h4></li>
+<li>
+<h4><a href="[%- c.uri_for('sequels') %]">Sequels</a></h4>
+
+<ul>
+<li>
+<h5>Sequal 1</h5>
+<ul>
+<li><h5>NL</h5></li>
+<li><h5>CycL</h5></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Planning Guidelines for Ideas on How to Recover from this Contigency</h4>
+</div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<h4>Inventory Lists &nbsp; <a href="[%- c.uri_for('') %]"><small><i class="fa fa-edit"></i></small></a>:</h4>
+<ul class="todo-list">
+[%- FOREACH swipli1 IN SWIPLI.GetList(SWIPLI.GetList(results).0) %]
+[%- result = SWIPLI.GetList(swipli1) -%]
+<li>
+<ul class="todo-list">
+[%- name = result.shift -%]
+Location: <a href="[%- c.uri_for(name) -%]">[%- name -%]</a>
+[%- FOREACH swipli2 IN result %]
+[%- result2 = SWIPLI.GetList(swipli2) %]
+[%- FOREACH swipli3 IN result2 %]
+[%- sublist = SWIPLI.GetList(swipli3) %]
+<li>
+[% qty = c.model('FRDCSA').Convert('Input', [sublist.1], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+[% matches1 = qty.match('(.+?)\.?\n?$') %]
+[% item = c.model('FRDCSA').Convert('Input', [sublist.0], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+[% matches2 = item.match('(.+?)\.?\n?$') %]
+[%- matches1.0 -%] - <a href="[%- c.uri_for(matches2.0) %]">[%- matches2.0 -%]</a> &nbsp;
+</li>
+[%- END -%]
+[%- END -%]
+</ul>
+</li>
+[%- END -%]
+</ul>

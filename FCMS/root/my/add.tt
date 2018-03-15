@@ -1,0 +1,15 @@
+[%- USE Dumper %]
+
+<form action="[%- c.uri_for('add') %]" method="post">
+Search: <input type="text" name="search">      
+<button type="submit" name="submit" id="btn-search" class="btn btn-default btn-flat">Search Types of Items</button>
+</form>
+
+<form action="[%- c.uri_for('add') %]" method="post">
+<ul>
+[%- FOREACH match IN c.stash.my_results %]
+<li><a href="[%- c.uri_for('add') -%]">[%- match | html -%]<input type="hidden" name="add-item" value="temp"></li>
+[%- END -%]
+</ul>
+<button type="submit" name="submit" id="btn-search" class="btn btn-default btn-flat">Add Item to [%- c.stash.my_type -%]</button>
+</form>

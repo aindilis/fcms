@@ -1,0 +1,141 @@
+	  <h4><a href="[%- c.uri_for('/planning','current-task') %]">Current Task</a>:</h4>
+	  <ul class="todo-list">
+	    <li>
+	      <!-- drag handle -->
+	      <span class="handle">
+		<i class="fa fa-ellipsis-v"></i>
+		<i class="fa fa-ellipsis-v"></i>
+	      </span>
+	      <!-- checkbox -->
+	      <input type="checkbox" value="" name="">
+	      <!-- todo text -->
+	      <span class="text">
+		<b>
+		  [%- FOREACH tmp IN steps.slice(current_plan_step_number,current_plan_step_number) %]
+		    [% plandata = SWIPLI.GetList(tmp) %]
+		    [% planstepnumber = plandata.0 %]
+		    [% planstep = plandata.1 %]
+		    [% tmp333 = planstep.shift %]
+		    
+		    [%- IF c.stash.verbose %]
+		      [%- planstep.3.1 %]
+		    [%- ELSE %]
+		      [%- planstep.3.2 %]
+		    [%- END %]
+		    [%- IF c.stash.seePDDL %]
+		    <br>([%- FOREACH token IN SWIPLI.GetList(planstep.1) %] &nbsp; <a href="[% c.uri_for('/ontology',token.lower)%]">[%- token FILTER lower, html %]</a> &nbsp; [%- END %])
+		    [%- END %]
+		  [%- END %]
+		</b>
+	      </span>
+
+	      <!-- Emphasis label -->
+	      <small class="label label-[%- IF planstep.0 < 1 %]danger[%- ELSIF planstep.0 < 5 %]warning[%- ELSIF planstep.0 < 24 %]primary[%- ELSE %]info[%- END %]"><i class="fa fa-clock-o"></i> [%- planstep.2 FILTER html %] hrs</small>
+	      <!-- General tools such as edit or delete-->
+	      
+	      &nbsp;&nbsp;&nbsp;&nbsp;
+	      <div class="tools">
+		<i class="fa fa-edit"></i>
+		<i class="fa fa-trash-o"></i>
+	      </div>
+	    </li>
+	  </ul>
+	  <!-- <a id="toggle-extra-care" class="btn btn-default pull-left" href="#"><i class="fa fa-plus"></i> I Want To Do This </a><br><br> -->
+	  <a class="btn btn-default pull-right" href="[%- c.uri_for('/ontology','dont-want-to') %]">
+	    <i class="fa fa-plus"></i> I Do Not Want to Do This
+	  </a>
+	  <a class="btn btn-default pull-right" href="[%- c.uri_for('/ontology','spse2') %]">
+	    <i class="fa fa-plus"></i> Why Should I Do This?
+	  </a>
+          <br><br>
+	  <div id="extra-care">
+	    <ul>
+	      <li>
+		<b>Before</b> performing the action of <em>[%- planstep.3.2 -%]</em>, please indicate which (if any) of the following requirements are currently not met:
+		<ul>
+		  <li>
+		    When the task is started:
+		    <ul class="todo-list">
+		    [%- FOREACH tmp IN steps.slice(current_plan_step_number,current_plan_step_number) %]
+		      [% plandata = SWIPLI.GetList(tmp) %]
+		      [% planstepnumber = plandata.0 %]
+		      [% planstep = plandata.1 %]
+		      [% tmp333 = planstep.shift %]
+
+		      [% tmp1 = planstep.4.1.shift %]
+		      [% i = 1 %]
+		      [% FOREACH precondition IN planstep.4.1 %]
+		      <li>
+                        <!-- checkbox -->
+			<input type="checkbox" name="precondition-[% i %]" value="satisfied" [% precondition.2 %]>
+			[% precondition.1 %]
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		      [% i = i + 1 %]
+		      [% END %]
+		    </ul>
+		    [% END %]
+		  </li>
+		</ul>
+	      </li>
+	    </ul>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','can-start') %]">Am Able to Start Task (even if some are not met), but Won't Until I Complete the Next Section </a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','cannot-start') %]">Am Unable to Start Task</a>
+	    </button>
+	    <br><br>
+	    <ul>	    
+	      <li>
+		<b>Before</b> starting the task, please indicate which (if any) of the following results cannot be met upon completion of the action:
+		<ul>
+		  <li>
+		    When the task is completed:
+		    <ul class="todo-list">
+		    [%- FOREACH tmp IN steps.slice(current_plan_step_number,current_plan_step_number) %]
+		      [% plandata = SWIPLI.GetList(tmp) %]
+		      [% planstepnumber = plandata.0 %]
+		      [% planstep = plandata.1 %]
+		      [% tmp333 = planstep.shift %]
+
+		      [% tmp2 = planstep.4.2.shift %]
+		      [% i = 1 %]
+		      [% FOREACH precondition IN planstep.4.2 %]
+		      <li>
+			<!-- checkbox -->
+			<input type="checkbox" name="precondition-[% i %]" value="satisfied" [% precondition.2 %]>
+			[% precondition.1 %]
+			&nbsp;
+			<i class="fa fa-hand-stop-o"></i>
+			<i class="fa fa-question"></i>
+		      </li>
+		      [% i = i + 1 %]
+		      [% END %]
+		    </ul>
+		    [% END %]
+		  </li>
+		</ul>
+	      </li>
+	    </ul>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','starting-task') %]">All True, Starting Task</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-left">
+	      <i class="fa fa-plus"></i> <a href="[% c.uri_for('/planning','current-task','how-do-i-perform-this-task') %]">How Do I Do This Task?</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus red"></i> <a href="[% c.uri_for('/planning','current-task','cannot-start-task') %]">Cannot Start Task</a>
+	    </button>
+
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="abort">Abort</a>
+	    </button>
+	    <button type="button" class="btn btn-default pull-right">
+	      <i class="fa fa-plus"></i> <a href="cancel">Cancel</a>
+	    </button>
+	  </div>
+
+	  <br><br><br><br><br><br><br><br>

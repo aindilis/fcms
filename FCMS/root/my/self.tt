@@ -1,0 +1,66 @@
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+[%- USE Dumper %]
+<h3>Predicates</h3>
+
+[%- Dumper.dump(results) -%]
+
+<ul>
+[%- i = 0 %]
+[%- FOREACH tmp IN c.stash.ordered %]
+<li>
+[%- FOREACH def IN tmp.Values %]
+    <form action="[%- c.uri_for('self','create') %]" method="get">
+    <button type="submit" name="submit" id="btn-[%- tmp.Predicate %]" class="btn btn-default btn-flat pull-left">
+    [%- tmp.Predicate | html %]
+    </button>	
+    <input type="hidden" name="pred" value="[%- tmp.Predicate | html %]">
+    [%- j = 1 %]
+    [%- FOREACH arg IN def.Interlingua %]
+    <input type="text" name="arg-[%- j %]" class="col-xs-1 freekbs2-completion" placeholder="[%- arg | html %]">
+    [%- j = j + 1 %]
+    [%- END %]
+    <input type="hidden" name="arity" value="[%- j - 1 | html %]">
+    </form>
+    <br>
+    <br>
+    [%- i = i + 1 %]
+[%- END %]
+</li>
+[%- END %]
+</ul>
+
+<script>
+$(function() {
+var availableTags = [
+"ActionScript",
+"AppleScript",
+"Asp",
+"BASIC",
+"C",
+"C++",
+"Clojure",
+"COBOL",
+"ColdFusion",
+"Erlang",
+"Fortran",
+"Groovy",
+"Haskell",
+"Java",
+"JavaScript",
+"Lisp",
+"Perl",
+"PHP",
+"Python",
+"Ruby",
+"Scala",
+"Scheme"
+];
+
+$( ".freekbs2-completion" ).autocomplete({
+source: availableTags
+});
+});
+
+</script>

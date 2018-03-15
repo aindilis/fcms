@@ -1,0 +1,450 @@
+[%-	meta.wrapper       = 'site-wrapper.tt';
+meta.title         = page.name;
+meta.menu_selected = page.name;
+%]
+
+<div class="homepage-panel">
+
+[%- news_posts = c.controller( 'News' ).get_posts( c, 1, 5 ) %]
+[%- IF news_posts %]
+<h3>	News
+</h3>
+<ul>
+[%- FOREACH news_post IN news_posts %]
+<li>	<a href="[% c.uri_for( '/news', news_post.posted.year, news_post.posted.month, news_post.url_title ) %]">[% news_post.title | html %]</a> - [% news_post.posted.day %] [% news_post.posted.month_abbr %] [% news_post.posted.year %]
+</li>
+[%- END %]
+</ul>
+[%- END %]
+
+</div>
+
+
+<div class="homepage-panel">
+[%- blog_posts = c.controller( 'Blog' ).get_posts( c, 1, 5 ) %]
+[%- IF blog_posts %]
+<h3>	Project Blog
+</h3>
+<ul>
+[%- FOREACH blog_post IN blog_posts %]
+<li>	<a href="[% c.uri_for( '/blog', blog_post.posted.year, blog_post.posted.month, blog_post.url_title ) %]">[% blog_post.title | html %]</a> 
+<!-- by <a href="[% c.uri_for( '/user', blog_post.author.username ) %]">[% blog_post.author.display_name || blog_post.author.username %]</a> -->
+[%- IF blog_post.discussion %]
+([% blog_post.comment_count %] comment[% 's' UNLESS blog_post.comment_count == 1 %])
+[%- ELSE %]
+<!-- (comments disabled) -->
+[%- END %]
+</li>
+[%- END %]
+</ul>
+[%- END %]
+</div>
+
+<div class="homepage-panel">
+[%- events = c.controller( 'Events' ).get_events( c, 5 ) %]
+[%- IF events %]
+<h3>	Events
+</h3>
+<ul>
+[%- FOREACH event IN events %]
+<li>	<a href="[% c.uri_for( '/events', event.start_date.year, event.start_date.month, event.url_name ) %]">[% event.name | html %]</a> - [% event.start_date.day %] [% event.start_date.month_abbr %] [% event.start_date.year %]
+</li>
+[%- END %]
+</ul>
+[%- END %]
+</div>
+
+<div class="homepage-panel">
+
+[%- most_recent = c.controller( 'Forums' ).most_recent_comment( c ) %]
+<h3>	Forum
+</h3>
+<p>
+<a href="[% c.uri_for( '/forums', most_recent.post.forum.section.url_name, most_recent.post.forum.url_name, most_recent.post.id, most_recent.post.url_title ) %]#comment-[% most_recent.id %]">[% most_recent.title || most_recent.body | remove( '<.+?>' ) | truncate | html %]</a> by [% IF most_recent.author_type == 'Site User' %]<a href="[% c.uri_for( '/user', most_recent.author.username ) %]">[% most_recent.author.display_name || most_recent.author.username %]</a>[% ELSIF most_recent.author_type == 'Unverified' %][% most_recent.author_name %][% ELSE %]Anonymous[% END %] at [% most_recent.posted.strftime('%H:%M') %] on [% most_recent.posted.day %] [% most_recent.posted.month_abbr %] [% most_recent.posted.year %]
+</p>
+</div>
+
+
+
+<h1>What is  the FRDCSA?</h1>
+
+"FRDCSA" stands for "Formalized Research Database: Cluster, Study and
+Apply".<p>
+
+<b>Cluster</b>: The FRDCSA is a large collection of software
+(codebases) that is actively maintained and expanded using a variety
+of methods (see <a href = "../internal/radar" >
+RADAR Internal Codebase </a>).<p>
+
+<b>Study</b>: Depending on licensing, packages or installers are
+semi-automatically created for each codebase.  (see <a href =
+"../internal/packager" > Packager Internal
+Codebase </a> )<p>
+
+<b>Apply</b>:  Packaged  systems  are  then  used  to  solve  existing
+problems.  (see <a href = "../internal/architect" > Architect Internal
+Codebase </a>)<p>
+
+The archive can be accessed either manually, or
+preferably, if you have "apt", by adding the following line to the
+/etc/apt/sources.list file:<p> <center>
+
+<pre>deb http://services.frdcsa.org/debian unstable/</pre>
+
+</center><p>
+
+<h1>Milestones</h1>
+
+<ul>
+<li>
+<b>December 13, 2016:</b> We aim to have 500
+unofficial Debian packages made.
+
+</li>
+<li>
+
+<strike><b>February 1, 2014:</b></strike>
+Completed: We aim to have new packages generated
+by packager uploaded.
+
+</li>
+
+<A href="../binary">page</a>.
+
+(Note that the number of  packages will be nonlinear WRT time, since
+we are automating the packaging process.)<p>
+
+If you are interested in sponsoring my work at all please see either
+the donation button at the bottom of <a
+href="http://frdcsa.org/~andrewdo">this page</a>, my <a
+href="https://www.patreon.com/user?u=2507799&ty=h">patreon page</a> or
+contact me with a subject of 'algorithmic information theory' at
+<a href="mailto:contact@frdcsa.org?subject=algorithmic+information+theory">
+contact@frdcsa.org
+</a>
+
+
+<p>
+</li>
+</ul>
+
+<hr>
+
+<h1>FRDCSA Technical Motivation</h1>
+<p>
+While the technical reference is still being written, please read the
+following two sources: Wikipedia <a
+href="http://en.wikipedia.org/wiki/Algorithmic_information_theory">article</a>
+on Algorithmic Information Theory </a>, and Chaitin's <a
+href="http://www.umcs.maine.edu/~chaitin/acm74.pdf">paper</a> [<a
+href="doc/acm74.pdf">mirror</a>].  It is very important that one
+understand this paper.  If one understands the major concepts in this
+paper, then there are only a few more concepts required to completely
+understand why we need to package software.
+</p>
+<p>
+Specifically, note  the section  which states: "The  approach of
+this paper,  in contrast, is  to measure the  power of a  set of
+axioms, to  measure the information that it  contains.  We shall
+see that there are circumstances in which one only gets out of a
+set of axioms  what one puts in, and in which  it is possible to
+reason  in  the  following  manner.  <em>If a  set  of  theorems
+constitutes t bits of information,  and a set of axioms contains
+less than t bits of information, then it is impossible to deduce
+these theorems from these axioms.</em>"
+</p>
+<p>
+Simply  replace   "theorems"  with  "problems",   "axioms"  with
+"programs", and "deduce" with  "solve" to understand the general
+necessity of having more software.
+</p>
+<p>
+A.K.A.:  <em>If  a  set   of  problems  constitutes  t  bits  of
+information, and a set of  programs contains less than t bits of
+information, then it is  impossible to solve these problems from
+these programs.</em>"
+</p>
+<p>
+So, increasing the information that our set of programs contains
+is necessary to solve increasingly complex problems.  The FRDCSA
+thesis held by members of the FRDCSA says <b>
+
+<!-- given the extent of available software, and the novelty and
+correctness  of  the  logical  part of  this  thesis,  packaging
+software en masse  is a necessary part of  any practical attempt
+of ours to create  increasingly capable problem solving systems!
+-->
+
+given the extent of free  software, packaging this software is a
+necessary step of any practical attempt by our group to increase
+our solution space.
+
+</b>
+
+It is not sufficient,  therefore we are writing numerous systems
+to help us glue the functionality of the software together where
+necessary.<p>
+<center><img src="sys.jpg"></center>
+<p>
+
+<!--We
+realization that  we currently do not  always understand exactly
+what  particular purposes  a  system might  serve.  However,  by
+packaging, studying and applying  a system we have allocated its
+capabilities.   These  capabilities  are precisely  those  which
+others found  to be  of such great  use that they  would develop
+them themselves.  We believe that our problems and solutions are
+not  independent.-->
+</p>
+<p>
+
+Although it represents almost 5 years of research, the FRDCSA is still
+in its beginning phases.  Check back frequently for additional
+functionality.  Help is sincerely needed in getting all these packages
+made.  Packages are necessary in order to quickly and conveniently
+access the capabilities of software systems.  If you would like to
+help make packages or join our group, please send mail to
+contact@frdcsa.org.
+
+</p>
+<h1>Further Reading</h1>
+<p>
+The  following reading  has been  very  useful in  giving us  an
+understanding of how to go about solving problems.
+<ul>
+<li>
+<a href="writeup.txt">writeup.txt</a>: The closest thing to a paper
+I've written.
+<li>
+<a href="http://www.andrew.cmu.edu/~cebrown/notes/ebbinghaus.html">
+Introduction  to Mathematical  Logic</a>:  Ebbinghaus, Flum.
+<li>The Undecidable:    Davis: 1965.   Basic    Papers    on   Undecidable
+Propositions,  Unsolvable  Problems  and  Computable  Functions. <br>
+Specifically read 1934 development of incompleteness theorems,
+and Turing's paper <a href="http://www.turingarchive.org/browse.php/B/15">
+Systems of Logic Based on Ordinals</a>
+<li>Transfinite Recursive Progressions of Axiomatic Theories:
+Feferman, S: 1962.  (I have not yet read this but it would appear to contain
+the idea.)
+<li><a href="http://www.umcs.maine.edu/~chaitin/acm74.pdf">
+Information-Theoretic Limitations of Formal Systems</a>:
+Chaitin, G.: 1974. [<a href="doc/acm74.pdf">mirror</a>]
+<li><a href="http://math.ucsd.edu/~sbuss/ResearchWeb/godelone/">
+On Goedel's theorems on lengths of proofs</a>:
+Buss, S. R.: 1994 [<a href="doc/paper.pdf">mirror</a>]
+<li><a href="http://www.debian.org/devel/">Debian Developers'
+Corner</a>
+<li><a href="http://www.people.fas.harvard.edu/~koellner/papers/QAU_reprint.pdf">
+On the Question of Absolute Undecidability</a> [<a href="doc/QAU_reprint.pdf">mirror</a>]
+</ul>
+</p>
+
+<hr>
+
+<h1>FAQ</h1>
+
+<a href="#Q1.1">What sort of solutions are we looking to create, for
+what sort of problems?
+</a><br>
+<a href="#Q1.2">Who all's involved?
+</a><br>
+<a href="#Q1.3">What sort of resources do we have to work with?
+</a><br>
+<a href="#Q1.4">What do we need to tackle short term?
+</a><br>
+<a href="#Q1.5">What's the next step.
+</a><br>
+<a href="#Q1.5">How is this project different than Sourceforge?
+</a><br>
+<a href="#Q1.5">How is this project different than CPAN?
+</a><br>
+
+
+
+<a name="Q1.1">
+<h3>Q</h3>
+
+What sort of solutions are we looking to create, for what sort of
+problems?<p>
+
+<h3>A</h3>
+
+There are a few central aims of our project.  Since we hold the belief
+that software must be reused, and  that key to this reuse is a central
+package repository, we aim to solve the problems necessary to:<p>
+
+<ol>
+<li>Create a Comprehensive Software Ontology (CSO).</li>
+<li>Compile as many packages  for software whose licenses permit and
+as we have  the resources to, using automatic  packaging tools we have
+written that  learn from our  experiences in packaging novel  types of
+applications.</li>
+<li>Find or create  software which helps the user  to locate the right
+tools     for      a     particular     job.       A     simple     <a
+href="example.html">example</a></li>
+</ol>
+
+<p>
+
+How  do we  limit which  types  of problems  we aim  to solve?   Well,
+eventually  we  would like  the  computer  to  define an  ontology  of
+problems, and  be able to do  planning.  Until we  have such software,
+however,  we  are  simply  using  our  intuitition.   Our  main  focus
+currently is  recruiting the core group of  programmers and packagers,
+since we feel that our purpose is well-defined but impractical without
+a software  development team focused  on achieving the above  3 goals.
+These goals simplify somewhat the actual nature of the problems, which
+we cannot yet  summarise, so you might already  be thinking about some
+of  the limitations  of the  above 3  goals.  Check  out  our internal
+codebases to  get a  better picture of  the state of  our approach.<p>
+<hr>
+
+<a name="Q1.2">
+<h3>Q</h3>Who all's involved?<p>
+<h3>A</h3>
+
+The project  was initiated by  a socially disabled college  student in
+his  first year  of college,  and has  been in  progress for  5 years,
+developing the  theory and  the central goals  of the project.   It is
+based  on results in  mathematical logic,  recursion theory  and proof
+theory.<p>
+
+<!-- Having defined the goals adequately,  a core group of individuals with
+a largely altruistic interest was recruited.  However this took longer
+than expected due to said social disability.<p>
+
+The  core  team  now  consists   of  a  group  of  4  highly  creative
+individuals.  However, luckily, there are  about 30 people in the area
+who have  expressed serious interest  in participation when  the group
+has become more established.   Therefore, we are working on recruiting
+primary  members who  are  of  exceptional value  to  the group  right
+now.<p>
+
+There are about 100 people in  the area who have expressed an interest
+in certain aspects of the project which are of mutual interest.<p>
+
+Lastly, once we are organized we will see what kind of interest exists
+in the online community.<p>
+-->
+
+Once I  am organized I  will see what  kind of interest exists  in the
+online community.<p>
+
+<hr>
+<a name="Q1.3">
+<h3>Q</h3>What sort of resources do we have to work with?<p>
+
+<h3>A</h3>
+
+<!--
+
+We  have  two  primary   types  of  resources,  physical  and  mental.
+Mentally, our  primary resource is  the theoretical framework  and the
+shared  goals of  our group,  which will  see us  through  the initial
+physical adversity during the difficult recruiting phase.<p>
+
+As  far as  resources  go, we  have  not raised  money yet,  prefering
+instead to fund  the project from small business.   We have a software
+product we will sell shortly to  raise more money, and we are pursuing
+fundraising opportunities for the project concurrently.<p>
+
+-->
+
+We have  about 15 computers, 10  of which are XP  1800/512 DDR/120 GB.
+<p>
+
+<hr>
+<a name="Q1.4">
+<h3>Q</h3>What do we need to tackle short term?<p>
+
+<!--
+
+<h3>A</h3>  Good question.   We need  people who  know what  to tackle
+short term.   We have lots of  things.  Mainly we have  large lists of
+relevant  tasks.  Without  a  doubt our  most  important objective  is
+recruitment of  skilled members  for software development  and project
+management.   On  the technical  side,  we  are  mainly interested  in
+getting  our  software development  servers  up  to  speed.  From  the
+nontechnical  side, we  are  interested  in creating  a  face for  our
+organization.<p>
+
+-->
+
+<h3>A</h3>  The completion of the planning system.<p>
+
+<hr>
+<a name="Q1.5">
+<h3>Q</h3>What's the next step.<p>
+
+<h3>A</h3>
+
+Our next step is really  the recruitment of additional members who can
+sort out the challenges and  find answers to these questions.
+
+<!--
+What we
+offer is a  solution to certain problems and  the essential service of
+packaging software for  a central repository in open  systems, since a
+brief  look  around  illustrates   this  inadequacy.   Lastly  we  are
+interested in  the fruits of  such a system  which we feel will,  as a
+result of  the software glue we  write, and the  knowledge inherent in
+the software we  package, will provide us with  better means to pursue
+our  goals and  to  contribute  to free  operating  systems and  smart
+computing platforms  that will help  society by literally  solving its
+problems.<p> <p>
+-->
+
+<hr>
+<a name="Q1.6">
+<h3>Q</h3>How is this project different than Sourceforge?.<p>
+
+<h3>A</h3>
+
+Good  question.    We  make  extensive  use  of   the  resources  that
+Sourceforge  provides.  Sourceforge  is a  great repository  of online
+software, but it  does not do certain things that  we need.  First, it
+does not  actively locate software  by spidering the web,  rather, the
+authors of software must register their product.  So, by spidering the
+web  and  their resources,  we  can  actually  create a  comprehensive
+software  ontology  that  includes  software  that  is  not  found  on
+Sourceforge.  Secondly, it does  not always provide packages for their
+software.<p> <p>
+
+<hr>
+<a name="Q1.6">
+<h3>Q</h3>How is this project different than CPAN?.<p>
+
+<h3>A</h3>
+
+CPAN is the Comprehensive Perl Archive Network.  While many of interal
+codebases  happen to  be written  in  Perl, the  majority of  external
+codebases are not.  Our system  is also different from the main Debian
+archive in  that our applications  have much lower  quality standards,
+since we don't have the talent or man power of Debian.  However, we do
+fill a role in that we make rough packages for end users, in the hopes
+that we can help them to solve their problems.  In this way, users are
+more likely  to find  what they  are looking for  and not  to redouble
+efforts, as this is wasteful to the world.<p>
+
+<address><a href="mailto:ajd@frdcsa.org">Andrew J. Dougherty</a></address>
+<!-- Created: Sun Feb  1 18:20:10 EST 2004 -->
+<!-- hhmts start -->Last modified: Wed Jun  7 10:27:17 CDT 2006 <!-- hhmts end -->
+</td></tr></table>
+
+<div id="block-block-9" class="block block-block">
+
+<h2>Support FRDCSA.org on Patreon!</h2>
+
+<div class="content">
+
+<strong><a href='[% c.uri_for( 'support-frdcsa-on-patreon' ) %]'>Read about the funding drive</a> or <a href='https://www.patreon.com/user?u=2507799&u=2507799&ty=h'>go right to Patreon</a>.</strong><br><br>
+Final goal: <strong>$200/month</strong><br>
+Current goal: <strong>Maintain Computing Infrastructure ($100/month)</strong> 
+
+<div style='width: 560px; height: 30px; border: 2px solid white;'>
+<div style='display: inline-block; width: 0%; height: 30px; background-color: #ff0;'></div>
+
+</div>
+<small style='position: relative; top: -25px;left: 250px'><strong><font color="888888">$  0.00/$100 (0%)</font></strong></small>
+<div><small>Last updated Thu, 12 Nov 2015 15:31:23.  For current progress, see our <a href='https://www.patreon.com/user?u=2507799&u=2507799&ty=h'>Patreon page</a>.</small></div>  </div>
+</div>

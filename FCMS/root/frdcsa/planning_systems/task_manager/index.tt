@@ -1,0 +1,76 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free Life Planner';
+-%]
+
+[%- USE Dumper %]
+<!-- Main row -->
+<div class="row">
+  <!-- right col (We are only adding the ID to make the widgets sortable)-->
+  <section class="col-lg-6 connectedSortable">
+
+    <!-- Chat box -->
+    <div class="box box-success">
+      <div class="box-header">
+	<i class="fa fa-comments-o"></i>
+
+	<h3 class="box-title">
+          Tasks &nbsp; <a href="[%- c.uri_for('/frdcsa','planning_systems','task_manager') %]"><small><i class="fa fa-edit"></i></small></a>:</h3>
+	</h3>
+     </div>
+     <div class="box-body">
+      <!-- /.chat -->
+
+      <form action="[% c.uri_for('new_task') %]" method="post">
+        <div class="box-footer">
+	  <div class="input-group">
+	    <input name="task" class="form-control" placeholder="Type New Task...">
+            <input type="hidden" name="importance" value="critical">
+
+	    <div class="input-group-btn">
+	      <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+	    </div>
+	  </div>
+        </div>
+      </form>
+
+      <form action="[% c.uri_for('handle_task') %]" method="post">
+        <div class="box-footer">
+	  <div class="input-group">
+            <ul class="todo-list">
+              [%- FOREACH task IN c.stash.guardian %]
+                <li>
+                  <!-- drag handle -->
+                  <span class="handle">
+                    <i class="fa fa-ellipsis-v"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                  </span>
+                  <!-- checkbox -->
+                  <input type="checkbox" name="[%- task -%]" value="1">
+                  <!-- todo text -->
+                  <span class="text">
+                    <b>
+                      <a href="">[%- task | html %]</a> &nbsp;
+                      <br>
+                    </b>
+                  </span>
+		  <div class="tools">
+		    <a href="[% c.uri_for('edit',task) %]"><i class="fa fa-edit"></i></a>
+		    <a href="[% c.uri_for('delete',task) %]"><i class="fa fa-trash-o"></i></a>
+		  </div>
+                </li>
+                [%- END %]
+              </ul>
+	    </div>
+            <div class="box-tools pull-right" data-toggle="tooltip" title="Submit New Task">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </div>
+            </div>
+	  </div>
+        </div>
+      </form>
+    </div>
+    <!-- /.box -->
+  </section>
+
+</div>

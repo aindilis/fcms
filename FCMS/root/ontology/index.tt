@@ -1,0 +1,15 @@
+[% USE Dumper(Indent=1) -%]
+
+[% IF results %]
+[% tmp = results.1.shift %]
+
+All Term Assertions:
+<ul>
+[% FOREACH result IN results.1 %]
+<li>
+	[% sublist = c.model('FRDCSA').PrepareWithLinks(c,result) -%]
+	[% sublist %]
+</li>
+[% END %]
+</ul>
+[% END %]

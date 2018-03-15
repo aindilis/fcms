@@ -1,0 +1,48 @@
+[% USE Dumper(Indent=1) -%]
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Utility Max System Account';
+-%]
+
+<script>
+  function printDiv(divName) {
+       var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+  
+       document.body.innerHTML = printContents;
+  
+       window.print();
+  
+       document.body.innerHTML = originalContents;
+  }
+</script>
+
+<!-- <a href="[% c.uri_for('print') %]" class="btn btn-default pull-left">Print</a><br><br> -->
+<input type="button" onclick="printDiv('printableArea')" value="Print" /><br><br>
+
+<div id="printableArea">
+  <b>Available Balance:</b> $[% transactions.1.1.1.1 %]<br>
+  <b>Current Balance:</b> $[% transactions.1.2.1.1 %]<br><br>
+  
+  [% alltransactions = transactions.1.3.1 %]
+  [% tmp1 = alltransactions.shift %]
+  
+  <table border="1">
+  [% FOREACH transaction IN alltransactions %]
+    [% tmp2 = transaction.shift %]
+    [% d = transaction.2.2 %]
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;[% d.1.1 %]/[% d.1.2 %]/[% d.2 %]&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>
+        [% description = transaction.1.2 %]
+        [% tmp3 = description.shift %]
+        [% FOREACH line IN description %]
+          [% IF line %]
+  	  &nbsp;&nbsp;&nbsp;&nbsp;[% line %]&nbsp;&nbsp;&nbsp;&nbsp;<br>
+          [% END %]
+        [% END %]
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;$[% transaction.0.2.1 %]&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  [% END %]
+  </table>
+</div>

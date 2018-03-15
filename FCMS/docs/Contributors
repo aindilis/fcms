@@ -1,0 +1,75 @@
+ShinyCMS Contributors
+=====================
+
+ShinyCMS is mostly written and maintained by Denny de la Haye <2018@denny.me>
+but a number of other people have also contributed to the project:
+
+	Helen Lambert <helen at shinyideas.co.uk>
+	- Design
+	- CSS fixes
+	- Favicon
+	- Feature suggestions
+	- Bug reports
+	
+	Aaron Trevena <aaron.trevena at gmail.com>
+	- Improved authorisation-checking code
+	- Database-driven sessions
+	
+	Tomas Doran - t0m on irc.perl.org
+	- Replacement authorisation-checking code
+	- Improved config handling
+	
+	castaway on irc.perl.org
+	- Bug reports
+	- Makefile.PL fix
+	
+	theorbtwo on irc.perl.org
+	- Bug reports
+	- Result::User pw fix
+	
+	Robert Hood <rphood at rphood.plus.com>
+	- FileManager.pm fix
+	
+	Paul Webster (daemon on irc.perl.org)
+	- Sample nginx config
+	
+	Dave Hodgkinson (daveh at hodgkinson.org
+	- Travis CI configuration
+	- Bug reports
+	
+	Rick Bychowski (Hiranyaloka on GitHub)
+	- Feature suggestions
+	- Bug reports
+	- site-footer.tt fix (make registration link conditional per config file)
+	
+	Lily Dart <lily at lilydart.com>
+	- Feature suggestions
+	
+	spacebat on GitHub
+	- Bug reports
+	
+	thowe on irc.freenode.net
+	- Bug reports
+	
+	meelash on GitHub
+	- Bug reports
+	
+	Various Shiny Ideas clients
+	- Feature requirements, UX feedback, and financial contributions
+
+
+The following projects have provided code snippets and/or guidance:
+
+	Dreamwidth (www.dreamwidth.org)
+	- Preview page javascript
+	
+	HTML5 Boilerplate (www.html5boilerplate.com)
+	- HTML, CSS and JS tweaks, optimisations, and browser-bug workarounds
+
+
+The following IRC channels have provided help and guidance:
+
+	#catalyst, #dbix-class, #moose and #tt on irc.perl.org
+
+	#perl on irc.freenode.net
+

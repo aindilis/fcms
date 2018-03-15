@@ -1,0 +1,26 @@
+#!/usr/bin/perl -w
+
+use BOSS::Config;
+use PerlLib::SwissArmyKnife;
+
+$specification = q(
+	<search>...	Searches to be acted upon
+);
+
+my $config =
+  BOSS::Config->new
+  (Spec => $specification);
+my $conf = $config->CLIConfig;
+# $UNIVERSAL::systemdir = "/var/lib/myfrdcsa/codebases/minor/system";
+
+my $search = $conf->{'<search>'}[0];
+print Dumper({Search => $search});
+
+#  echo "foo" | xargs -i echo {} "bar"
+my $res1 = `find /var/lib/myfrdcsa/codebases/minor/fcms/FCMS/root | grep -v '\\.js\$' | grep -v '~\$' |  grep -v /var/lib/myfrdcsa/codebases/minor/fcms/FCMS/root/var | xargs grep -iE '$search' {} 2> /dev/null`;
+my $res2 = `find /var/lib/myfrdcsa/codebases/minor/fcms/FCMS/lib | grep -v '\\.js\$' | grep -v '~\$' | xargs grep -iE '$search' {} 2> /dev/null`;
+$res1 =~ s/\s*$//sg;
+$res2 =~ s/\s*$//sg;
+$res3 = $res1.$res2;
+print $res3;
+

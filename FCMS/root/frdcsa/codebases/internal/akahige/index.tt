@@ -1,0 +1,7 @@
+[% USE Dumper(Indent=1) -%]
+
+<h3>Welcome to [%- user -%]'s Health Chart!</h3>
+
+<pre>[%- Dumper.dump(medicationsListPrintout) -%]</pre>
+
+<pre>[%- Dumper.dump(results) -%]</pre>

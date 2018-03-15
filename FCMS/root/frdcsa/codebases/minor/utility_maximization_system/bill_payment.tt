@@ -1,0 +1,129 @@
+<h3>Bill Payment Subsystem</h3>
+
+[% USE Dumper %]
+[% USE SWIPLI %]
+
+[% hash = SWIPLI.GetHash(SWIPLI.GetList(results).0) %]
+
+<a href="[% c.uri_for('define_new_bill') %]" class="btn btn-default pull-left">Define New Bill</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a href="[% c.uri_for('make_one_time_payment') %]" class="btn btn-default pull-left">Make One Time Payment</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <a href="[% c.uri_for('make_one_time_payment') %]" class="btn btn-default pull-left">View Paid Bills</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+
+<br><br>
+
+<h4>Paid Bills</h4>
+
+<form method="[% c.uri_for('payment_failed') %]" action="POST">
+<ul>
+[% tmp = hash.paidBills.shift %]
+[% FOREACH tmpbill IN hash.paidBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount: [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+<a href="[% c.uri_for('payment_failed') %]" class="btn btn-default pull-left">Payment Failed</a><br><br>
+
+<h4>Submitted Bills</h4>
+
+<form method="[% c.uri_for('/unknown') %]" action="POST">
+<ul>
+[% tmp = hash.submittedBills.shift %]
+[% FOREACH tmpbill IN hash.submittedBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount: [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+<a href="[% c.uri_for('/unknown') %]" class="btn btn-default pull-left">Payment Failed</a><br><br>
+
+<h4>Overdue Bills</h4>
+
+<form method="[% c.uri_for('pay_bills') %]" action="POST">
+<ul>
+[% tmp = hash.overdueBills.shift %]
+[% FOREACH tmpbill IN hash.overdueBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount: [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+<a href="[% c.uri_for('bill_payment') %]" class="btn btn-default pull-left">Pay Selected Overdue Bills</a><br><br>
+
+<h4>Confirmed Upcoming Bills</h4>
+
+<form method="[% c.uri_for('pay_overdue_bills') %]" action="POST">
+<ul>
+[% tmp = hash.confirmedUpcomingBills.shift %]
+[% FOREACH tmpbill IN hash.confirmedUpcomingBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount: [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+<a href="[% c.uri_for('pay_confirmed_upcoming_bills') %]" class="btn btn-default pull-left">Pay Selected Confirmed Upcoming Bills</a><br><br>
+
+<h4>Expected Upcoming Bills (Fixed Amounts)</h4>
+
+<form method="[% c.uri_for('pay_expected_upcoming_bills') %]" action="POST">
+<ul>
+[% tmp = hash.expectedUpcomingBills.shift %]
+[% FOREACH tmpbill IN hash.expectedUpcomingBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount: [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+
+<a href="[% c.uri_for('confirm_bills') %]" class="btn btn-default pull-left">Confirmed Selected Expected Upcoming Bills</a><br><br>
+
+
+<h4>Predicted Upcoming Bills (Variable Amounts)</h4>
+
+<form method="[% c.uri_for('pay_predicted_upcoming_bills') %]" action="POST">
+<ul>
+[% tmp = hash.predictedUpcomingBills.shift %]
+[% FOREACH tmpbill IN hash.predictedUpcomingBills %]
+  [% bill = SWIPLI.GetHash(tmpbill) %]
+  <li>
+    <input id="[% SWIPLI.ToProlog(c,bill.descriptionGloss) %]" name="tmp" value="temp" type="checkbox">
+
+    &nbsp;&nbsp;
+
+    Bill Description: [% SWIPLI.ToProlog(c,bill.descriptionGloss) %] - Amount between: [% SWIPLI.ToProlog(c,bill.amountGloss) %] and [% SWIPLI.ToProlog(c,bill.amountGloss) %], Due: [% SWIPLI.ToProlog(c,bill.dueDateTimeGloss) %]
+  </li>
+[% END %]
+</ul>
+</form>
+
+<a href="[% c.uri_for('confirm_bills') %]" class="btn btn-default pull-left">Confirmed Selected Predicted Upcoming Bills</a><br><br>

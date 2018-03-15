@@ -1,0 +1,59 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free WOPR';
+-%]
+
+[% USE Dumper(Indent=1) -%]
+
+[% IF query_result %]
+[% Dumper.dump(query_result) %]
+[% END %]
+
+[% tmp = c.stash.results.1.shift  %]
+[% output = c.stash.results.1.hash %]
+[% tmp = output.unpreparedForContingency.shift %]
+[% tmp = output.planForContingency.shift %]
+
+<!-- Main row -->
+  <div class="box-body">
+    <!-- Left col -->
+    <section class="col-lg-6 connectedSortable">
+      <!-- TO DO List -->
+      <div class="box box-primary">
+
+	<div class="box-body">
+
+	  <h4>Unprepared For Contingencies &nbsp; <a href="[%- c.uri_for('') %]"><small><i class="fa fa-edit"></i></small></a>:</h4>
+
+	  [%- FOREACH contingency IN output.unpreparedForContingency %]
+	  [% contingencyProlog = c.model('FRDCSA').Convert('Input', [contingency], 'InputType', 'Interlingua', 'OutputType', 'Prolog') %]
+	  [% matches = contingencyProlog.match('(.+?)\.?\n?$') %]
+	  <a href="[%- c.uri_for('contingency',matches.0) %]">[%- matches.0 -%]</a> <br>
+
+	    <form action="[% c.uri_for('new_solution') %]" method="post">
+	      <div class="box-footer">
+		<div class="input-group">
+                  <input type="hidden" name="contingency" value="[% matches.0 %]">
+		  <!-- "(generate-phrase '(#$isa #$AndrewDougherty #$Person)" -->
+
+		  <input name="preconditions" class="form-control" placeholder="Type Preconditions for this Contingency...">
+		  <input name="effects" class="form-control" placeholder="Type Effects for this Contingency...">
+		  <input name="solution" class="form-control" placeholder="Type Plan for this Contingency...">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                  </div>
+		</div>
+	      </div>
+	    </form>
+	    <br>
+	    </b>
+	      [%- END %]
+
+	</div>
+	<!-- /.box -->
+
+    </section>
+    <!-- /.Left col -->
+
+  </div>
+  <!-- /.row (main row) -->

@@ -1,0 +1,204 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free Life Planner';
+-%]
+
+[%- USE Dumper %]
+[%- USE SWIPLI %]
+
+[% transformed = SWIPLI.GetList(SWIPLI.GetList(c.stash.plan).0) %]
+[% parsed = transformed.0 %]
+[% goals = transformed.1 %]
+[% steps = transformed.2 %]
+[% tmptmp = steps.shift %]
+
+<!-- Main row -->
+<div class="row">
+  <!-- Left col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="/plan/change-time-frame">Current</a>
+	  <a href="/plan/change-plan-scope">[%- plan_scope FILTER html %]</a>
+	  <a href="/plan">Plan</a>
+	  for <a href="/user">[%- c.stash.user_name FILTER html %]</a>
+	</h3>
+	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a>
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box box-solid">
+	<div class="box-header">
+	  <h3 class="box-title">
+	    <a href="/plan/change-metric">Best</a>
+	    <a href="/plan/change-plan-type">[%- plan_type FILTER html %]</a>
+	    Plan
+	  </h3>
+	</div>
+	<!-- /.box-header -->
+
+	<div class="box-body">
+          [%- INCLUDE 'frdcsa/codebases/minor/iem/simple-interface.tt' -%]
+	  [% i = 0 %]
+          <h4><a href="[%- c.uri_for('/planning','tasks') %]">Upcoming Tasks</a>:</h4>
+	  	  
+          [%- FOREACH tmp IN steps.slice(1,-1) %]
+            [% plandata = SWIPLI.GetList(tmp) %]
+	    [% planstepnumber = plandata.0 %]
+	    [% planstep = plandata.1 %]
+	    [% tmp333 = planstep.shift %]
+	    
+            [% i = i + 1 %]
+            <ul class="todo-list">
+	      <li>
+	        <!-- drag handle -->
+	        <span class="handle">
+	    	<i class="fa fa-ellipsis-v"></i>
+	    	<i class="fa fa-ellipsis-v"></i>
+	        </span>
+	        <!-- checkbox -->
+	        <input type="checkbox" value="" name="">
+	        <!-- todo text -->
+	        <span class="text">
+	    	[%- IF c.stash.verbose %]
+	    	[%- planstep.3.1 %]
+	    	[%- ELSE %]
+	    	[%- planstep.3.2 %]
+	    	[%- END %]
+	    	[%- IF c.stash.seePDDL %]
+	    	<br>([%- FOREACH token IN planstep.1 %] &nbsp; <a href="[% c.uri_for('/ontology',token.lower)%]">[%- token FILTER lower, html %]</a> &nbsp; [%- END %])
+	    	[%- END %]
+	    	<!-- Emphasis label -->
+	    	<small class="label label-[%- IF planstep.0 < 1 %]danger[%- ELSIF planstep.0 < 5 %]warning[%- ELSIF planstep.0 < 24 %]primary[%- ELSE %]info[%- END %]"><i class="fa fa-clock-o"></i> [%- planstep.2 FILTER html %] hrs</small>
+	    	<!-- General tools such as edit or delete-->
+	    
+	    	&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<div class="tools">
+	    	  <i class="fa fa-edit"></i>
+	    	  <i class="fa fa-trash-o"></i>
+	    	</div>
+                </span>
+	      </li>
+            </ul>
+	    
+	    <!-- <a id="toggle-extra-care-[%- i -%]" class="btn btn-default pull-left" href="#extra-care-[%- i -%]"><i class="fa fa-plus"></i> Look at Pre/Post </a><br><br> -->
+            <div id="extra-care-[%- i -%]">
+	      <ul>
+	        <li>
+	    	<b>Before</b> performing the action of <em>[%- planstep.3.2 -%]</em>, please indicate which (if any) of the following requirements are currently not met:
+	    	<ul>
+	    	  <li>
+	    	    When the task is started:
+	    	    <ul class="todo-list">
+	    	      [%- tmp1 = planstep.4.1.shift -%]
+	    	      [%- FOREACH precondition IN planstep.4.1 -%]
+	    	      <li>
+	    		<!-- checkbox -->
+	    		<input type="checkbox" value="" name="">
+	    		[% precondition %]
+	    		&nbsp;
+	    		<i class="fa fa-hand-stop-o"></i>
+	    		<i class="fa fa-question"></i>
+	    	      </li>
+	    	      [%- END -%]
+	    	    </ul>
+	    	  </li>
+	    	</ul>
+	        </li>
+	      </ul>
+	      <ul>	    
+	        <li>
+	    	<b>Before</b> starting the task, please indicate which (if any) of the following results cannot be met upon completion of the action:
+	    	<ul>
+	    	  <li>
+	    	    When the task is completed:
+	    	    <ul class="todo-list">
+	    	      [%- tmp2 = planstep.4.2.shift -%]
+	    	      [%- FOREACH effect IN planstep.4.2 -%]
+	    	      <li>
+	    		<!-- checkbox -->
+	    		<input type="checkbox" value="" name="">
+	    		[% effect %]
+	    		&nbsp;
+	    		<i class="fa fa-hand-stop-o"></i>
+	    		<i class="fa fa-question"></i>
+	    	      </li>
+	    	      [%- END -%]
+	    	    </ul>
+	    	  </li>
+	    	</ul>
+	        </li>
+              </ul>
+             </li>
+            </ul>
+          [%- END -%]
+        </div>
+	<!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Left col -->
+
+  <!-- Right col -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- TO DO List -->
+    <div class="box box-primary">
+      <div class="box-header">
+	<i class="ion ion-clipboard"></i>
+
+	<h3 class="box-title">
+	  <a href="[% c.uri_for('') %]">Objectives</a>
+	</h3>
+	<a href="[%- c.uri_for('/frdcsa/codebases/minor/free_life_planner',,{'replan' => 1}) %]"> &nbsp; <i class="fa fa-refresh"></i> </a>
+
+      </div>
+      <!-- /.box-header -->
+
+      <div class="box-body">
+	<form action="[% c.uri_for('') %]" method="POST">
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>New Objectives</button>
+	  <br><br>
+          <ul class="todo-list">
+  	    [%- tmp = goals.shift -%]
+  	    [%- FOREACH goal IN goals -%]
+  	    <li>
+  	      <!-- drag handle -->
+  	      <span class="handle">
+  	        <i class="fa fa-ellipsis-v"></i>
+  		<i class="fa fa-ellipsis-v"></i>
+  	      </span>
+  	      <!-- checkbox -->
+  	      <input type="checkbox" value="" name="">
+  	      <!-- todo text -->
+  	      <span class="text">
+  	        [% goal.2 %]
+  		<!-- General tools such as edit or delete-->
+  
+  		&nbsp;&nbsp;&nbsp;&nbsp;
+  		<div class="tools">
+  		  <i class="fa fa-edit"></i>
+  		  <i class="fa fa-trash-o"></i>
+  		</div>
+                </span>
+  	    </li>
+  	    [%- END -%]
+          </ul>
+	  <br>
+	  <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>Remove</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Right col -->
+
+</div>
+
+

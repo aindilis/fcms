@@ -1,0 +1,57 @@
+[%-	meta.wrapper = 'site-wrapper.tt';
+meta.title   = 'Free Life Planner';
+-%]
+
+[%- USE Dumper %]
+<!-- Main row -->
+<div class="row">
+  <!-- left col (We are only adding the ID to make the widgets sortable)-->
+  <section class="col-lg-6 connectedSortable">
+
+    <!-- Chat box -->
+    <div class="box box-success">
+      <div class="box-header">
+	<i class="fa fa-comments-o"></i>
+
+	<h3 class="box-title">
+	  <a href="[% c.uri_for('/frdcsa','codebases','internal','disciple') %]">Checklists</a>
+	</h3>
+     </div>
+     <div class="box-body">
+	<h3>Upcoming Checklist Items &nbsp; <a href="[%- c.uri_for('') %]"><small><i class="fa fa-edit"></i></small></a>:</h3>
+	<ul class="todo-list">
+	  [%- FOREACH constraint IN c.stash.results.1 %]
+	  <li>
+	    <!-- drag handle -->
+	    <span class="handle">
+	      <i class="fa fa-ellipsis-v"></i>
+	      <i class="fa fa-ellipsis-v"></i>
+	    </span>
+	    <!-- checkbox -->
+	    <input type="checkbox" value="" name="">
+	    <!-- todo text -->
+	    <span class="text">
+	      <b>
+		<a href="[%- c.uri_for('constraint') %]">[%- constraint | html %]</a> &nbsp;
+		<br>
+	      </b>
+	    </span>
+	  </li>
+	  [%- END %]
+	</ul>
+      </div>
+      <form action="[%- c.uri_for('log_checklist_item') -%]" method="post" class="sidebar-form">
+	<div class="input-group">
+	  <input type="text" name="q" class="form-control" placeholder="Log Checklist Item...">
+	  <span class="input-group-btn">
+	    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+	    </button>
+	  </span>
+	</div>
+      </form>
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- left col -->
+</div>
